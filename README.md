@@ -9,3 +9,5 @@ Note make sure sid meier's railroads has the 1.1.0.0 61414 update <br/>
 RailRoads (Oringal exe) <br/>
 RailRoads_LAA (Large Address Aware enabled, solves many crash issues) <br/>
 RailRoads_LAA_OpenSpy (Replaces gamespy.com with openspy.net so online multiplayer works + Large Address Aware enabled, solves many crash issues) <br/>
+
+Simple copy the exe file into your game directory 
