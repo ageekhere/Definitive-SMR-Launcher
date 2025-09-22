@@ -1,0 +1,197 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "./Definitive-SMR-Launcher/main.pyw"
+  },
+  {
+   "optionDest": "onefile",
+   "value": true
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "./Definitive-SMR-Launcher/icon/icon.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "Definitive-SMR-Launcher"
+  },
+  {
+   "optionDest": "upx_dir",
+   "value": "./upx-5.0.2-win64"
+  },
+  {
+   "optionDest": "clean_build",
+   "value": true
+  },
+  {
+   "optionDest": "splash",
+   "value": "./Definitive-SMR-Launcher/splashScreen/splash.jpg"
+  },
+  {
+   "optionDest": "optimize",
+   "value": "2"
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "version_file",
+   "value": "./Definitive-SMR-Launcher/version/version_info.txt"
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": true
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/archive_maps.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/config_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/create_icon.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/create_splash.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/create_symlink.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/custom_exe_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/debug_window.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/difficulty_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/error_logs.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/file_operations.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/game_launcher.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/gamepath_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/github_update.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/interface_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_checker.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_download_extract.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_downloader.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_extractor.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_info_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_manager.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_update_worker.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/map_updater.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/set_game_type_selection.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/string_utils.pyw;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/exe;exe/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/icon;icon/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/interface;interface/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/DSMRL_data;DSMRL_data/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/interface/background.jpg;."
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}
