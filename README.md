@@ -16,7 +16,7 @@ All aboard, aspiring tycoon! Definitive-SMR-Launcher puts the full power of the 
 Whether you’re competing online, exploring new maps, or mastering the toughest routes, Definitive-SMR-Launcher ensures your trains are always on schedule.
 Hop on, fire up your engines, and let your rail adventure steam ahead! 
 
-Join the Sid Meier's Railroads Discord and learn how you can submit your own maps to the Internet Archive collection or organize a multiple game https://discord.gg/Guy9kGm8
+Join the Sid Meier's Railroads Discord and learn how you can submit your own maps to the Internet Archive collection or organize a multiple game https://discord.gg/Th8MBdYW5v
 
 Supports Steam and Disk versions
 
