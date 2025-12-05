@@ -19,7 +19,7 @@ def gamepath_manager():
 
             # Update label in UI
             __main__.gGameLocation_label.configure(
-                text=str(__main__.string_utils(folder_path, max_length=180, placeholder="..."))
+                text=str(__main__.string_utils(folder_path, max_length=30, placeholder="..."))
             )
 
             # Update global variables

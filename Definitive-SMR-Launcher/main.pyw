@@ -48,9 +48,9 @@ from archive_maps import archive_maps
 from set_game_type_selection import set_game_type_selection
 from gamepath_manager import gamepath_manager
 from github_update import github_update
+from tool_tip import ToolTip
 
 def stopThread():
-    print("thread")
     gStopDownload.set()
     time.sleep(1.0)
 if __name__ == '__main__': 
@@ -81,8 +81,8 @@ if __name__ == '__main__':
     # Internet Archive
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
-    gVersion:str = "1.00" # App version
-    gGitHubVersion:str = "version1.00"
+    gVersion:str = "1.01" # App version
+    gGitHubVersion:str = "version1.01"
     gBackGroundImageUrl:str = r"interface\background.jpg"
     gCustom_difficulty = None
     gCustom_exe = None
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     gGameDocs = None
     gSelected_button = None
     gGameLocation_label = None
-    gCustomExe = False
+    
     gAppWidth = 1280 
     gAppHeight = 720
     gMain_font = ctk.CTkFont(family="arial", size=19,weight="bold")
@@ -123,6 +123,10 @@ if __name__ == '__main__':
     mainWindowY = (gApp.winfo_screenheight() - gAppHeight) // 6 # Use to center the app windows along Y
     gApp.geometry(f"{gAppWidth}x{gAppHeight}+{mainWindowX}+{mainWindowY}") # Set the app geometry so that it is centered 
     create_icon(sys) # Create an icon for the app
+
+    gCustomExe = False
+    if get_config_value("enableopenspy") == "1":
+        gCustomExe = True
 
     if getattr(sys, 'frozen', False): # Running as a PyInstaller bundle
         bg_image_path = os.path.join(sys._MEIPASS, "background.jpg")
@@ -171,10 +175,5 @@ if __name__ == '__main__':
     download_dir_path.mkdir(parents=True, exist_ok=True)
 
     interface_manager(os,ctk)
-
     github_update()
     gApp.mainloop()
-
-
-
-

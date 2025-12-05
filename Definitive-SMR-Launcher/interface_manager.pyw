@@ -30,7 +30,7 @@ def interface_manager(os,ctk):
     __main__.gCustom_difficulty = ctk.IntVar(value=int(__main__.get_config_value("customdifficulty", default="0")))
     __main__.gCustom_levels_button = ctk.CTkCheckBox(
         __main__.gApp,
-        text="Custom Difficulty Levels",
+        text="Custom Difficulty Levels  ",
         variable=__main__.gCustom_difficulty,
         corner_radius=0,
         command=__main__.difficulty_manager
@@ -62,7 +62,7 @@ def interface_manager(os,ctk):
     __main__.gCustom_exe = ctk.IntVar(value=int(__main__.get_config_value("enableopenspy", default="0")))
     __main__.gCustom_exe_button = ctk.CTkCheckBox(
         __main__.gApp,
-        text="Enable OpenSpy LAA exe",
+        text="Enable OpenSpy LAA exe  ",
         variable=__main__.gCustom_exe,
         corner_radius=0,
         command=__main__.custom_exe_manager
@@ -86,7 +86,8 @@ def interface_manager(os,ctk):
         __main__.gCustom_exe_button.configure(state="disabled")
         __main__.gGameTypeDrop.configure(state="disabled")
     else:
-        __main__.gGameLocation_label.configure(text=str(__main__.string_utils(__main__.gGamePath, max_length=40, placeholder="...")))
+        __main__.gGameLocation_label.configure(text=str(__main__.string_utils(__main__.gGamePath, max_length=30, placeholder="...")))
+        __main__.ToolTip(__main__.gGameLocation_label, str(__main__.gGamePath))
         __main__.error_logs(f"[interface] Game Path " + str(__main__.gGamePath), "info")
         __main__.gCustom_levels_button.configure(state="normal")
         __main__.gStart_button.configure(state="normal")

@@ -24,8 +24,8 @@ def game_launcher():
     runexe = "RailRoads.exe"
 
     # Check if user wants to use custom OpenSpy exe
-    if getattr(__main__, "gCustomExe", False):
-        gametype = __main__.get_config_value("USERINFO", "gametype") or "Steam"
+    if (__main__.gCustomExe == True):
+        gametype = __main__.get_config_value("gametype")
         if gametype == "Steam":
             runexe = "RailRoads_Steam_LAA_OpenSpy.exe"
         else:
@@ -36,9 +36,22 @@ def game_launcher():
 
     exe_path = __main__.os.path.join(__main__.gGamePath, runexe)
 
+    # Check if file exists
+    if not __main__.os.path.isfile(exe_path):
+        __main__.error_logs(f"[game_launcher] File not found: {exe_path}", "error")
+        return
+
+    workdir = __main__.os.path.dirname(exe_path)
+
     try:
-        ret = windll.shell32.ShellExecuteW(None, "runas", exe_path, None, None, 1)
+        ret = windll.shell32.ShellExecuteW(None, "runas", exe_path, None, workdir, 1)
+
+        # Log the return code
+        __main__.error_logs(f"[game_launcher] ShellExecute return code: {ret}", "info")
+
         if ret <= 32:
-            __main__.error_logs("[game_launcher] Cannot start game", "error")
+            __main__.error_logs(f"[game_launcher] Cannot start game, error code {ret}", "error")
+            return
+
     except Exception as e:
         __main__.error_logs(f"[game_launcher] Error starting game: {e}", "error")

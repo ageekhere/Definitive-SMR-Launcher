@@ -175,10 +175,6 @@
   },
   {
    "optionDest": "datas",
-   "value": "./Definitive-SMR-Launcher/icon;icon/"
-  },
-  {
-   "optionDest": "datas",
    "value": "./Definitive-SMR-Launcher/interface;interface/"
   },
   {
@@ -188,6 +184,18 @@
   {
    "optionDest": "datas",
    "value": "./Definitive-SMR-Launcher/interface/background.jpg;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/tool_tip.pyw;."
+  },
+  {
+   "optionDest": "copy_metadata",
+   "value": "imageio"
+  },
+  {
+   "optionDest": "datas",
+   "value": "./Definitive-SMR-Launcher/icon/icon.ico;."
   }
  ],
  "nonPyinstallerOptions": {
