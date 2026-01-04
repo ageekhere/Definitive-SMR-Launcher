@@ -2,7 +2,8 @@
   "The_Everglades_v1_00": {
     "Map Name": "The Everglades",
     "url": "3",
-    "is_stable": "y"
+    "is_stable": "y",
+    "multiplayer": "y"
   },
   "blank": {
     "url": "0"
