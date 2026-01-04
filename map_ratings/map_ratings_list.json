@@ -5,7 +5,19 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Africa_Challenge_v1": {
+    "Map Name": "Africa Challenge",
+    "url": "6",
+    "is_stable": "n",
+    "multiplayer": "y"
+  },
   "blank": {
-    "url": "0"
+    "Map Name": "",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": ""
   }
 }
+
+
+    "Africa_Challenge_v1",
