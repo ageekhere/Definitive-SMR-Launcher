@@ -1,7 +1,8 @@
 {
   "The_Everglades_v1_00": {
     "Map Name": "The Everglades",
-    "url": "3"
+    "url": "3",
+    "is_stable": "y"
   },
   "blank": {
     "url": "0"
