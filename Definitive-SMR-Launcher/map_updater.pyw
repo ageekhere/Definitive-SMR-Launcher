@@ -6,8 +6,6 @@ Uses globals and imports from main.py.
 """
 
 import __main__  # Access main's globals and imports
-import customtkinter as ctk
-import time
 
 def map_updater():
     """
@@ -17,33 +15,37 @@ def map_updater():
     """
     try:
         # --- Create new popup and store reference ---
-        popup = ctk.CTkToplevel()
-        popup.title("Updates")
+        
+        __main__.gUpdateWindow = __main__.ctk.CTkToplevel()
+
+        __main__.gUpdateWindow.title(str(len(__main__.gNewDownloadMaps)) + " New Maps Available To Download")
 
         # Set size
         width, height = 800, 600
-        popup.geometry(f"{width}x{height}")
+        __main__.gUpdateWindow.geometry(f"{width}x{height}")
 
         # Keep popup always on top
-        popup.attributes("-topmost", True)
+        __main__.gUpdateWindow.attributes("-topmost", True)
 
         # Center relative to the main window
-        master = popup.master
+        master = __main__.gUpdateWindow.master
         master.update_idletasks()
         x = master.winfo_x() + (master.winfo_width() // 2 - width // 2)
         y = master.winfo_y() + (master.winfo_height() // 2 - height // 2)
-        popup.geometry(f"{width}x{height}+{x}+{y}")
+        __main__.gUpdateWindow.geometry(f"{width}x{height}+{x}+{y}")
+
+        __main__.create_icon(__main__.sys, __main__.gUpdateWindow)
 
         # Scrollable frame for checkboxes
-        scrollable_frame = ctk.CTkScrollableFrame(popup)
+        scrollable_frame = __main__.ctk.CTkScrollableFrame(__main__.gUpdateWindow)
         scrollable_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
         checkbox_vars = {}
 
         # --- Add checkboxes for online download maps ---
         for value in __main__.gNewDownloadMaps:
-            var = ctk.IntVar(value=0)
-            checkbox = ctk.CTkCheckBox(
+            var = __main__.ctk.IntVar(value=0)
+            checkbox = __main__.ctk.CTkCheckBox(
                 scrollable_frame,
                 text=f"{value[0]} - Download",
                 variable=var
@@ -54,8 +56,8 @@ def map_updater():
 
         # --- Add checkboxes for local maps not extracted ---
         for value in __main__.gNewLocalMaps:
-            var = ctk.IntVar(value=0)
-            checkbox = ctk.CTkCheckBox(
+            var = __main__.ctk.IntVar(value=0)
+            checkbox = __main__.ctk.CTkCheckBox(
                 scrollable_frame,
                 text=f"{value[0]} - Local",
                 variable=var
@@ -94,13 +96,13 @@ def map_updater():
             __main__.gCancel_button.configure(state="disabled")
 
         # Buttons
-        selectAll = ctk.CTkButton(popup, text="Select All", command=show_selected)
+        selectAll = __main__.ctk.CTkButton(__main__.gUpdateWindow, text="Select All", command=show_selected)
         selectAll.pack(pady=10, anchor="w")
 
-        install_button = ctk.CTkButton(popup, text="Install Maps", command=install_maps)
+        install_button = __main__.ctk.CTkButton(__main__.gUpdateWindow, text="Install Maps", command=install_maps)
         install_button.pack(pady=10, anchor="w")
 
-        __main__.gCancel_button = ctk.CTkButton(popup, text="Cancel", command=install_cancel)
+        __main__.gCancel_button = __main__.ctk.CTkButton(__main__.gUpdateWindow, text="Cancel", command=install_cancel)
         __main__.gCancel_button.pack(pady=10, anchor="w")
         __main__.gCancel_button.configure(state="disabled")
 

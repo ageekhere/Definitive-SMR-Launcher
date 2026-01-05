@@ -6,15 +6,13 @@ Uses globals and imports from main.py.
 """
 
 import __main__  # Access main's globals and imports
-from pathlib import Path
-import requests
 
 def map_checker():
     __main__.error_logs("[map_checker] Checking for map updates" , "info")
     urls = __main__.archive_maps()
 
-    maps_dir_path = Path(__main__.os.getcwd()) / "maps"
-    download_dir_path = Path(__main__.os.getcwd()) / "downloads"
+    maps_dir_path = __main__.Path(__main__.os.getcwd()) / "maps"
+    download_dir_path = __main__.Path(__main__.os.getcwd()) / "downloads"
 
     # Downloaded .7z filenames without extension
     downloaded_files = [f.stem for f in download_dir_path.glob("*.7z")]
@@ -43,17 +41,11 @@ def map_checker():
     __main__.gNewDownloadMaps = urls_to_download
     __main__.gNewLocalMaps = files_to_extract
 
-    #for map_name, url in urls_to_download:  # unpack tuple
-        #__main__.error_logs("[map_checker] New maps to download " + str(map_name) , "info")
-
-
-    #for map_name, url in urls_to_download:  # unpack tuple
-         #__main__.error_logs("[map_checker] New maps to install " + str(map_name) , "info")
-
     if not urls_to_download and not files_to_extract:
         __main__.gUpdate_maps_button.configure(state="disabled")
-        __main__.error_logs("[map_checker] No New maps to download " + str(map_name) , "info")
+        __main__.error_logs("[map_checker] No New maps to download " , "info")
     else:
         __main__.gUpdate_maps_button.configure(state="normal")
+        
         
     return urls_to_download, files_to_extract

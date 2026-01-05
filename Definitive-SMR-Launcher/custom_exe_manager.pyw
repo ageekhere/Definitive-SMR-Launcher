@@ -3,7 +3,7 @@ custom_exe_manager.py
 
 Handles enabling or disabling the custom OpenSpy LAA executable for the game.
 """
-from config_manager import get_config_value, set_config_value
+
 #from file_operations import file_operations  # Make sure you have this function implemented
 import __main__  # Access global variables from main
 
@@ -20,7 +20,7 @@ def custom_exe_manager():
         __main__.set_config_value("enableopenspy", "1")
 
         # Copy the appropriate exe to the game folder based on gametype
-        gametype = get_config_value("gametype")
+        gametype = __main__.get_config_value("gametype")
         if gametype == "Other":
             __main__.file_operations("RailRoads_LAA_OpenSpy.exe")
             __main__.error_logs("[custom_exe_manager] Using RailRoads_LAA_OpenSpy.exe ", "info")

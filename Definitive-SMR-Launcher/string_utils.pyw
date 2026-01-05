@@ -17,7 +17,7 @@ def string_utils(input_string: str, max_length: int = 100, placeholder: str = ".
     Returns:
         str: The truncated string if it exceeds max_length, else the original string.
     """
-    __main__.error_logs(f"[string_utils] resize string " + str(input_string),"info")
+    __main__.error_logs("[string_utils] resize string " + str(input_string),"info")
     if len(input_string) > max_length:
         return input_string[: max_length - len(placeholder)] + placeholder
     return input_string

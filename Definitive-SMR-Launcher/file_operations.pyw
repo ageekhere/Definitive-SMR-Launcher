@@ -3,7 +3,6 @@ file_operations.py
 
 Contains utility functions for copying files to the game directory.
 """
-import shutil
 
 import __main__  # Access global variables from main
 
@@ -26,7 +25,7 @@ def file_operations(file_name="file1.exe") -> bool:
         return False
 
     try:
-        shutil.copy(source_path, dest_path)
+        __main__.shutil.copy(source_path, dest_path)
         __main__.error_logs(f"[file_operations] Copied {file_name} to {__main__.gGamePath}", "info")
     except Exception as e:
         __main__.error_logs(f"[file_operations] Error copying file {file_name}: {e}", "error")

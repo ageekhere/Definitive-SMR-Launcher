@@ -5,9 +5,6 @@ Extracts any remaining downloaded map archives that are not yet extracted.
 """
 
 import __main__  # Access main's globals and functions
-from pathlib import Path
-import py7zr
-import time
 
 def map_extractor():
     """
@@ -19,11 +16,11 @@ def map_extractor():
         __main__.gUpdateCheckBoxes
         __main__.map_manager
     """
-    __main__.error_logs(f"[map_extractor]", "info")
+    __main__.error_logs("[map_extractor]", "info")
 
     try:
-        maps_dir = Path(__main__.os.getcwd()) / "maps"
-        download_dir = Path(__main__.os.getcwd()) / "downloads"
+        maps_dir = __main__.Path(__main__.os.getcwd()) / "maps"
+        download_dir = __main__.Path(__main__.os.getcwd()) / "downloads"
 
         for file in download_dir.glob("*.7z"):
             folder_name = file.stem
@@ -41,7 +38,7 @@ def map_extractor():
 
             __main__.error_logs(f"[map_extractor] Extracting leftover {file.name}...", "info")
 
-            with py7zr.SevenZipFile(file, mode='r') as archive:
+            with __main__.py7zr.SevenZipFile(file, mode='r') as archive:
                 file_list = archive.list()
                 total_size = sum(f.uncompressed for f in file_list)
                 extracted_size = 0
@@ -57,7 +54,7 @@ def map_extractor():
                             text=f"{folder_name} - {percent:.2f}%"
                         )
 
-                    time.sleep(0.01)  # optional for visible UI update
+                    __main__.time.sleep(0.01)  # optional for visible UI update
 
                 # Perform the actual extraction
                 archive.extractall(path=maps_dir)
@@ -70,4 +67,5 @@ def map_extractor():
 
     except Exception as e:
         __main__.error_logs(f"[map_extractor] Error extracting files: {e}", "error")
-    __main__.error_logs(f"[map_extractor] Finished", "info")
+    __main__.error_logs("[map_extractor] Finished", "info")
+    __main__.gUpdateWindow.withdraw()

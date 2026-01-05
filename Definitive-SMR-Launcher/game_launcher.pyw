@@ -6,7 +6,6 @@ Uses globals and imports from main.py.
 """
 
 import __main__  # Access main's globals and imports
-from ctypes import windll
 
 def game_launcher():
     """
@@ -44,7 +43,7 @@ def game_launcher():
     workdir = __main__.os.path.dirname(exe_path)
 
     try:
-        ret = windll.shell32.ShellExecuteW(None, "runas", exe_path, None, workdir, 1)
+        ret = __main__.windll.shell32.ShellExecuteW(None, "runas", exe_path, None, workdir, 1)
 
         # Log the return code
         __main__.error_logs(f"[game_launcher] ShellExecute return code: {ret}", "info")

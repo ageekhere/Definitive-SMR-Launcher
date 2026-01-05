@@ -4,7 +4,6 @@ difficulty_manager.py
 Manages enabling or disabling custom difficulty XML files for the game.
 """
 
-import shutil
 import __main__  # Access global variables from main
 
 def difficulty_manager() -> None:
@@ -24,12 +23,12 @@ def difficulty_manager() -> None:
 
             # Create backup if missing
             if __main__.os.path.exists(difficulty_file_game) and not __main__.os.path.exists(difficulty_file_backup):
-                shutil.copy(difficulty_file_game, difficulty_file_backup)
+                __main__.shutil.copy(difficulty_file_game, difficulty_file_backup)
                 __main__.error_logs(f"[difficulty_manager] Backed up original {difficulty_file_game} to {difficulty_file_backup}","info")
 
             # Copy custom difficulty into place
             if __main__.os.path.exists(difficulty_file_source):
-                shutil.copy(difficulty_file_source, difficulty_file_game)
+                __main__.shutil.copy(difficulty_file_source, difficulty_file_game)
                 __main__.error_logs(
                     f"[difficulty_manager] Copied custom difficulty from {difficulty_file_source} to {difficulty_file_game}","info")
             else:
@@ -41,7 +40,7 @@ def difficulty_manager() -> None:
 
             # Restore backup if it exists
             if __main__.os.path.exists(difficulty_file_backup):
-                shutil.copy(difficulty_file_backup, difficulty_file_game)
+                __main__.shutil.copy(difficulty_file_backup, difficulty_file_game)
                 __main__.error_logs("[difficulty_manager] Restored original difficulty file", "info")
             else:
                 __main__.error_logs("[difficulty_manager] No backup found to restore!", "warning")

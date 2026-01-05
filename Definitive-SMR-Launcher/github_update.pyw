@@ -1,6 +1,5 @@
 import __main__
 from datetime import date
-import requests 
 import webbrowser
 
 def github_update():
@@ -13,12 +12,12 @@ def github_update():
         try:
             GITHUB_API = "https://api.github.com"
             repo = "ageekhere/Definitive-SMR-Launcher"
-            response = requests.get(f"{GITHUB_API}/repos/{repo}/releases/latest")
+            response = __main__.requests.get(f"{GITHUB_API}/repos/{repo}/releases/latest")
             latest_release = response.json()
             latest_version = latest_release.get("tag_name")
 
             if latest_version != __main__.gGitHubVersion and latest_version != None:
-                __main__.error_logs(f"[github_update] Update found " + str(latest_version), "info")
+                __main__.error_logs("[github_update] Update found " + str(latest_version), "info")
                 # Create a popup window
                 popup = __main__.ctk.CTkToplevel(__main__.gApp)
                 popup.title("New Update")
@@ -45,6 +44,6 @@ def github_update():
                 button = __main__.ctk.CTkButton(popup, text="Download at Github", command=open_webpage)
                 button.pack(expand=True, padx=20, pady=20)
             else:
-                __main__.error_logs(f"[github_update] UpToDate " + str(latest_version), "info")
+                __main__.error_logs("[github_update] UpToDate " + str(latest_version), "info")
         except Exception as e:
-            __main__.error_logs(f"[github_update] Cannot Check for updates" + str(e), "error")
+            __main__.error_logs("[github_update] Cannot Check for updates" + str(e), "error")

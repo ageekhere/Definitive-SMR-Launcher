@@ -1,8 +1,6 @@
-# config_manager.pyw
-import __main__  # Access shared globals from main
+import __main__ # Import the __main__ module so we can access variables and functions defined in the main script
 
 def read_write_config(fileAction: str) -> None:
-    from configparser import ConfigParser
     """
     Read or write the INI config file.
 
@@ -43,8 +41,6 @@ def read_write_config(fileAction: str) -> None:
         __main__.error_logs(f"[read_write_config] Cannot access {__main__.gConfigPath}: {e}", "error")
 
 def make_config() -> None:
-    from configparser import ConfigParser
-    from pathlib import Path
     """
     Create or load the user configuration file (config/config.ini).
     If the file does not exist, a new one with default values is created.
@@ -57,8 +53,8 @@ def make_config() -> None:
     """
     __main__.error_logs("[make_config] Setting up user config.ini", "info")
 
-    __main__.gConfigUserData = ConfigParser()
-    __main__.gConfigPath = Path("config/config.ini")
+    __main__.gConfigUserData = __main__.ConfigParser()
+    __main__.gConfigPath = __main__.Path("config/config.ini")
 
     try:
         if __main__.gConfigPath.is_file():

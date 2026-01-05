@@ -1,11 +1,5 @@
-"""
-icon_manager.pyw
-
-Handles application icon setup for both PyInstaller bundles and normal Python scripts.
-Uses globals from __main__ (expects gApp).
-"""
-import __main__  # Access globals from the main script
-def create_icon(sys):
+import __main__ # Import the __main__ module so we can access variables and functions defined in the main script
+def create_icon(sys,window):
     """
     Set the window icon depending on execution context.
     
@@ -21,8 +15,9 @@ def create_icon(sys):
             icon_path = __main__.os.path.join("icon", "icon.ico")
             __main__.error_logs(f"[create_icon] Using script icon at {icon_path}", "info")
 
-        __main__.gApp.iconbitmap(icon_path)
-        __main__.error_logs(f"[create_icon] Successfully applied icon", "info")
+        window.after(200, lambda: window.iconbitmap(icon_path))
+        #window.iconbitmap(icon_path)
+        __main__.error_logs("[create_icon] Successfully applied icon", "info")
 
     except Exception as e:
-        __main__.error_logs(f"[create_icon] Failed to set icon: {e}", "error")
+        __main__.error_logs("[create_icon] Failed to set icon: " + str(e), "error")

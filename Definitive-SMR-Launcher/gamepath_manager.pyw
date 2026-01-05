@@ -35,6 +35,6 @@ def gamepath_manager():
                 __main__.gCustom_exe_button.configure(state="normal")
                 __main__.gCustom_levels_button.configure(state="normal")
                 
-            __main__.error_logs(f"[gamepath_manager] Game parth set " + str(folder_path), "info")
+            __main__.error_logs("[gamepath_manager] Game parth set " + str(folder_path), "info")
     except Exception as e:
         __main__.error_logs(f"[gamepath_manager] Error setting game path: {e}", "error")

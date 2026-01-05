@@ -5,9 +5,6 @@ Downloads a .7z map archive from a URL and extracts it into the maps directory.
 """
 
 import __main__  # Access main's globals and functions
-from pathlib import Path
-import requests
-import py7zr
 
 def map_download_extract(url: str, filename: str):
     """
@@ -20,13 +17,16 @@ def map_download_extract(url: str, filename: str):
     """
     try:
         # Ensure downloads directory exists
-        download_dir = Path(__main__.os.getcwd()) / "downloads"
+        download_dir = __main__.Path(__main__.os.getcwd()) / "downloads"
         download_dir.mkdir(exist_ok=True)
-        dest_file = download_dir / filename
+
+        reName = filename.split("/")[-1]
+        dest_file = download_dir / reName
+
 
         # Download the file with progress
         __main__.error_logs(f"[map_download_extract] Downloading {filename}...", "info")
-        r = requests.get(url, stream=True)
+        r = __main__.requests.get(url, stream=True)
         total_size = int(r.headers.get("content-length", 0))
         downloaded_size = 0
 
@@ -59,12 +59,12 @@ def map_download_extract(url: str, filename: str):
         __main__.gUpdateCheckBoxes[renameFile].configure(text=f"{renameFile} Extracting...")
 
         # Extract the file
-        maps_dir = Path(__main__.os.getcwd()) / "maps"
+        maps_dir = __main__.Path(__main__.os.getcwd()) / "maps"
         maps_dir.mkdir(exist_ok=True)
         __main__.error_logs(f"[map_download_extract] Extracting {filename}...", "info")
 
 
-        with py7zr.SevenZipFile(dest_file, mode='r') as archive:
+        with __main__.py7zr.SevenZipFile(dest_file, mode='r') as archive:
             archive.extractall(path=maps_dir)
 
         __main__.error_logs(f"[map_download_extract] Extracted {filename} into {maps_dir}", "info")
