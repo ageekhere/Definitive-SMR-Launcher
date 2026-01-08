@@ -5,24 +5,6 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "Africa_Challenge_v1": {
-    "Map Name": "Africa Challenge",
-    "url": "6",
-    "is_stable": "n",
-    "multiplayer": "y"
-  },
-  "4_Rivers_Conversion_v1_00": {
-    "Map Name": "4 Rivers Conversion",
-    "url": "9",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
-  "A_Tycoon's_Tale_v1_00": {
-    "Map Name": "A Tycoon's Tale",
-    "url": "10",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
   "blank": {
     "Map Name": "",
     "url": "",
