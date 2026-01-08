@@ -93,7 +93,6 @@ if __name__ == '__main__':
     gUsermap_path = None
     gGamePath = ""
 
-
     # ---------------------- Game / App state ----------------------
     gCustom_difficulty = None
     gCustom_exe = None
@@ -117,8 +116,8 @@ if __name__ == '__main__':
     gGitHubBranch = "main"
     gGitHubOwner = "ageekhere"
     gGitHubRepo = "Definitive-SMR-Launcher"
-    gGitHubVersion: str = "version1.02"
-    gVersion: str = "1.02"
+    gGitHubVersion: str = "version1.03"
+    gVersion: str = "1.03"
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
     # ---------------------- Fonts / Geometry ----------------------
@@ -127,7 +126,7 @@ if __name__ == '__main__':
     gMain_font = ctk.CTkFont(family="arial", size=19, weight="bold")
 
     # ---------------------- Debug / Logging ----------------------
-    gDebug: bool = True
+    gDebug: bool = False
     gLogs: list = []
 
     # ---------------------- Initialization ----------------------

@@ -51,11 +51,14 @@ def map_info_manager(mapId: str):
         __main__.create_icon(__main__.sys, popup)
 
         def rate_map(map:str):
+            if map == "":
+                return
             url = "https://github.com/ageekhere/Definitive-SMR-Launcher/discussions/" + str(map)
             webbrowser.open(url)
         
         btn_text = str(__main__.rating_check(mapId))
 
+        map_url = __main__.get_map_data(mapId, __main__.gMap_rating_matrix,"url")
         btn_font = __main__.ctk.CTkFont(size=16)
         info_btn = __main__.ctk.CTkButton(
             popup,
@@ -64,7 +67,7 @@ def map_info_manager(mapId: str):
             corner_radius=0,
             text= btn_text + " Click Here to rate Map",
             font=btn_font,
-            command=__main__.partial(rate_map, "3"))
+            command=__main__.partial(rate_map, map_url))
         info_btn.grid(row=1, column=0, padx=5, pady=0,sticky="nw")
 
         if(btn_text == "Rating Unavailable"):
