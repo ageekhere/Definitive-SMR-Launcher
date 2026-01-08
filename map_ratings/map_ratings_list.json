@@ -17,6 +17,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "A_Tycoon's_Tale_v1_00": {
+    "Map Name": "A Tycoon's Tale",
+    "url": "10",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "Map Name": "",
     "url": "",
