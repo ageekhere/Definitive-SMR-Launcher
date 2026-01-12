@@ -35,6 +35,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Africa_Diamonds_v1_01": {
+    "Map Name": "Africa Diamonds",
+    "url": "14",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "Map Name": "",
     "url": "",
@@ -42,3 +48,4 @@
     "multiplayer": ""
   }
 }
+
