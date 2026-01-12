@@ -5,7 +5,7 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "Africa_Challenge_v1": {
+  "Africa_Challenge_v1_01": {
     "Map Name": "Africa Challenge",
     "url": "6",
     "is_stable": "n",
@@ -29,15 +29,15 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "Africa_Challenge_v1_01": {
-    "Map Name": "Africa Challenge",
-    "url": "13",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
   "Africa_Diamonds_v1_01": {
     "Map Name": "Africa Diamonds",
     "url": "14",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alaska_Early_v1_01": {
+    "Map Name": "Alaska Early",
+    "url": "15",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -48,4 +48,3 @@
     "multiplayer": ""
   }
 }
-
