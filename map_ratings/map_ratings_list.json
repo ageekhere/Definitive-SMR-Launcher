@@ -47,6 +47,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Alternate_Balkans_v1_00": {
+    "Map Name": "Alternate Balkans",
+    "url": "17",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "Map Name": "",
     "url": "",
