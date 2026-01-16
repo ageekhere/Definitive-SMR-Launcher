@@ -1,60 +1,60 @@
 {
   "The_Everglades_v1_00": {
-    "Map_Name": "The Everglades",
+    "map_name": "The Everglades",
     "url": "3",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Africa_Challenge_v1_01": {
-    "Map_Name": "Africa Challenge",
+    "map_name": "Africa Challenge",
     "url": "6",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "4_Rivers_Conversion_v1_00": {
-    "Map_Name": "4 Rivers Conversion",
+    "map_name": "4 Rivers Conversion",
     "url": "9",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "A_Tycoon's_Tale_v1_00": {
-    "Map_Name": "A Tycoon's Tale",
+    "map_name": "A Tycoon's Tale",
     "url": "10",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Aberdeen_Carolina_&_Western_RR_v1_00": {
-    "Map_Name": "Aberdeen Carolina & Western RR",
+    "map_name": "Aberdeen Carolina & Western RR",
     "url": "12",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Africa_Diamonds_v1_01": {
-    "Map_Name": "Africa Diamonds",
+    "map_name": "Africa Diamonds",
     "url": "14",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Alaska_Early_v1_01": {
-    "Map_Name": "Alaska Early",
+    "map_name": "Alaska Early",
     "url": "15",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Alaska_v1_00": {
-    "Map_Name": "Alaska",
+    "map_name": "Alaska",
     "url": "16",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "Alternate_Balkans_v1_00": {
-    "Map_Name": "Alternate Balkans",
+    "map_name": "Alternate Balkans",
     "url": "17",
     "is_stable": "y",
     "multiplayer": "y"
   },
   "blank": {
-    "Map Name": "",
+    "map_name": "",
     "url": "",
     "is_stable": "",
     "multiplayer": ""
