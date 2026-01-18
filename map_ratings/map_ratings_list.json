@@ -59,6 +59,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Alternate_United_Kingdom_v1_00": {
+    "map_name": "Alternate United Kingdom",
+    "url": "19",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
