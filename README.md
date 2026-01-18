@@ -42,9 +42,13 @@ All map data goes in UserMaps
 
 Example of mapInfo.txt
 ```
-V1.00
-2012/12/19
-Author
+Map Name: NAME OF MAP
+Map Version: V1.00
+Date Created: 2026/01/01
+Date Updated: 2026/01/01
+Author: NAME
+Modified by: HELPERS 
+Type: Multiplayer OR Single player
 
 About your map
 ```
