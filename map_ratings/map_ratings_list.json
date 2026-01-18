@@ -53,6 +53,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Alternate_Germany_Universe_v1_00": {
+    "map_name": "Alternate Germany Universe",
+    "url": "18",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
