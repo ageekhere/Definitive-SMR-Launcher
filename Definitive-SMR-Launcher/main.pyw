@@ -4,6 +4,7 @@ import sys                     # System-specific parameters and functions
 import time
 import threading
 import shutil
+import ctypes
 from ctypes import windll       # Windows API access (e.g., DPI awareness)
 from functools import partial   # Pass arguments into callbacks
 
@@ -116,8 +117,8 @@ if __name__ == '__main__':
     gGitHubBranch = "main"
     gGitHubOwner = "ageekhere"
     gGitHubRepo = "Definitive-SMR-Launcher"
-    gGitHubVersion: str = "version1.03"
-    gVersion: str = "1.03"
+    gGitHubVersion: str = "version1.04"
+    gVersion: str = "1.04"
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
     # ---------------------- Fonts / Geometry ----------------------
@@ -134,6 +135,7 @@ if __name__ == '__main__':
     error_logs(f"[Main] Python version: {sys.version}")
 
     ctk.deactivate_automatic_dpi_awareness()
+
     error_logs("[Main] Disabled DPI awareness", "info")
 
     ctk.set_appearance_mode("dark")

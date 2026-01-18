@@ -6,6 +6,7 @@ Uses globals and imports from main.py.
 """
 
 import __main__  # Access main's globals and imports
+from tkinter import messagebox
 
 def map_updater():
     """
@@ -66,8 +67,16 @@ def map_updater():
             checkbox_vars[value] = var
             __main__.gUpdateCheckBoxes[str(value[0])] = checkbox
 
+        def disable_close():
+            if install_button.cget("state") == "disabled":
+                messagebox.showwarning(
+                    "Please wait",
+                    "Downloads are still in progress Press Cancel to stop the download.",parent=__main__.gUpdateWindow)
+
         # --- Function to install selected maps ---
         def install_maps():
+            __main__.gUpdateWindow.protocol("WM_DELETE_WINDOW", disable_close)
+
             __main__.gDownloadList = [name[0] for name, var in checkbox_vars.items() if var.get() == 1]
             __main__.error_logs(f"[map_updater] install list {__main__.gDownloadList}", "info")
             install_button.configure(state="disabled")

@@ -80,7 +80,7 @@ def load_map_ratings_matrix(force_refresh=False):
 
     for map_id, info in data.items():
         map_ids.append(map_id)
-        map_names.append(info.get("Map Name", map_id))  # fallback to ID
+        map_names.append(info.get("map_name", map_id))  # fallback to ID
         urls.append(info.get("url", ""))
         is_stable.append(info.get("is_stable", ""))    # fallback empty
         multiplayer.append(info.get("multiplayer", ""))  # fallback empty

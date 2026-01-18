@@ -43,4 +43,3 @@ def map_update_worker():
         __main__.error_logs(f"[map_update_worker] Error in download thread: {e}", "error")
 
     __main__.stopThread()
-    #__main__.gCancel_button.configure(state="disabled")

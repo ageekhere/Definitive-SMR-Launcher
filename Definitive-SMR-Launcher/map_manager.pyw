@@ -93,21 +93,30 @@ def map_manager():
                 info_btn_color = "#1f6aa5"
                 info_btn_textcolor = "#ffffff"
 
-                display_text = ellipsize(map_folder, 30)
-                map_name = display_text
-                
+                display_text = ellipsize(map_folder, 99)
+                map_name = map_folder
+
+                if __main__.get_map_data(map_name, __main__.gMap_rating_matrix,"id") != None:
+                    display_text = __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"name")
+                    display_text = ellipsize(display_text, 27)
+
+                if __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"Map Name") != None:
+                    map_name = __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"Map Name")
+
                 if __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"is_stable") == "n":
                     info_btn_textcolor = "black"
                     info_btn_color = "#d48806"
                     display_text = "⚠ " + display_text
-                display_text += "\n"
+                
                 
                 if __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"multiplayer") == "n":
-                    display_text += "👤 "
+                    display_text += "\n 👤 "
                 elif __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"multiplayer") == "y":
-                    display_text += "👤👤 "
+                    display_text += "\n 👤👤 "
 
                 if __main__.get_map_data(map_name, __main__.gMap_rating_matrix,"id") != None:
+
+
                     rating_list =__main__.get_map_rating(str(__main__.get_map_data(map_name, __main__.gMap_rating_matrix,"url"))) 
 
                     text_value = float(rating_list[6].strip("()").split("/")[0])
