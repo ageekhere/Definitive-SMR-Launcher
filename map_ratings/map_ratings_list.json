@@ -71,6 +71,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Appalachia_Rails_v1_00": {
+    "map_name": "Appalachia Rails",
+    "url": "22",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "",
