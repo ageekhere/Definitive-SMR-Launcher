@@ -89,6 +89,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "America_Revision_3_v1_00": {
+    "map_name": "America Revision 3",
+    "url": "24",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
