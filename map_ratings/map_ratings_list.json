@@ -95,6 +95,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Amerigonia_Duals_v1_00": {
+    "map_name": "Amerigonia Duals",
+    "url": "25",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
