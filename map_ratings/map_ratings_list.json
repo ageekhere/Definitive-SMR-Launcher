@@ -101,6 +101,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Amerigonia_v1_00": {
+    "map_name": "Amerigonia",
+    "url": "28",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
