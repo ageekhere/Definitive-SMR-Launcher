@@ -107,6 +107,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Arabia_v1_00": {
+    "map_name": "Arabia",
+    "url": "29",
+    "is_stable": "n",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
