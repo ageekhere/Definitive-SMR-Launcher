@@ -113,6 +113,12 @@
     "is_stable": "n",
     "multiplayer": "y"
   },
+  "Arizona_Rails_v1_01": {
+    "map_name": "Arizona Rails",
+    "url": "30",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "",
