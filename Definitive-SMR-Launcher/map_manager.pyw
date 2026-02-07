@@ -8,6 +8,12 @@ Uses globals and libraries imported in main.py.
 import __main__
 
 def map_manager():
+    __main__.threading.Thread(
+        target=map_manager_thread,
+        daemon=True
+    ).start()
+
+def map_manager_thread():
     __main__.error_logs("[map_manager] Add maps to interface", "info")
 
     maps_directory = "maps"
@@ -114,12 +120,14 @@ def map_manager():
                 elif __main__.get_map_data(map_folder, __main__.gMap_rating_matrix,"multiplayer") == "y":
                     display_text += "\n 👤👤 "
 
+                
                 if __main__.get_map_data(map_name, __main__.gMap_rating_matrix,"id") != None:
 
-
+                    #slow
                     rating_list =__main__.get_map_rating(str(__main__.get_map_data(map_name, __main__.gMap_rating_matrix,"url"))) 
 
                     text_value = float(rating_list[6].strip("()").split("/")[0])
+
                     if(text_value >= 5.0):
                         display_text += "⭐⭐⭐⭐⭐"
 
@@ -138,7 +146,9 @@ def map_manager():
                     else:
                         display_text += "🛑"
 
+
                 btn_font = __main__.ctk.CTkFont(size=16)
+
                 info_btn = __main__.ctk.CTkButton(
                     __main__.gScrollable_frame,
                     width=thumb_size[0],

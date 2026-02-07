@@ -117,8 +117,8 @@ if __name__ == '__main__':
     gGitHubBranch = "main"
     gGitHubOwner = "ageekhere"
     gGitHubRepo = "Definitive-SMR-Launcher"
-    gGitHubVersion: str = "version1.04"
-    gVersion: str = "1.04"
+    gGitHubVersion: str = "version1.05"
+    gVersion: str = "1.05"
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
     # ---------------------- Fonts / Geometry ----------------------
@@ -216,11 +216,14 @@ if __name__ == '__main__':
     download_dir_path.mkdir(parents=True, exist_ok=True)
 
     # ---------------------- Managers / Watchers ----------------------
-    interface_manager(os, ctk)
-    github_update()
-    main_watcher()
-    update_maps_timer()
-    check_openspy()  # Uncomment if needed
+    
+    def after_gui_loaded():
+        interface_manager(os, ctk)
+        github_update()
+        main_watcher()
+        update_maps_timer()
+        check_openspy()  # Uncomment if needed
 
-    # ---------------------- Run App ----------------------
+    gApp.after(100, after_gui_loaded)
+
 gApp.mainloop()
