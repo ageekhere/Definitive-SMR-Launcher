@@ -143,6 +143,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Austrian_Hungarian_Monarchy_v1_00": {
+    "map_name": "Austrian Hungarian Monarchy",
+    "url": "35",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "",
