@@ -125,6 +125,12 @@
     "is_stable": "y",
     "multiplayer": "n"
   },
+  "Australia_2_v1_00": {
+    "map_name": "Australia 2",
+    "url": "32",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
