@@ -149,6 +149,12 @@
     "is_stable": "y",
     "multiplayer": "n"
   },
+  "Basin_And_Range_v1_00": {
+    "map_name": "Basin And Range",
+    "url": "36",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
