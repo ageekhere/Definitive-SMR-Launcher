@@ -137,6 +137,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "AZ_Canyon_V02_v1_00": {
+    "map_name": "AZ Canyon V02",
+    "url": "34",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
