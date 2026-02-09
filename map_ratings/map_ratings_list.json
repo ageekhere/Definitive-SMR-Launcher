@@ -131,6 +131,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Australia_3_v1_01": {
+    "map_name": "Australia 3",
+    "url": "33",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
