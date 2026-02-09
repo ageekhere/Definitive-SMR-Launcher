@@ -119,6 +119,12 @@
     "is_stable": "y",
     "multiplayer": "n"
   },
+  "Attica5_v1_00": {
+    "map_name": "Attica 5",
+    "url": "31",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "",
