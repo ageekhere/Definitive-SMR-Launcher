@@ -59,12 +59,24 @@ class MapsHandler(FileSystemEventHandler):
     Watchdog event handler that triggers on ANY filesystem event.
     """
     def on_created(self, event):
+        if __main__.is_map_manager_running() == "y":
+            __main__.error_logs(f"[folder_watcher] map_manager is running, skipping")
+            return
+
+        if __main__.check_for_popup_window(__main__.gApp) == True:
+            __main__.error_logs(f"[folder_watcher] popup window is open, skipping")
+            return
+
         on_maps_changed(event)
 
-    #def on_modified(self, event):
-        #on_maps_changed(event)
-
     def on_deleted(self, event):
+        if __main__.is_map_manager_running() == "y":
+            __main__.error_logs(f"[folder_watcher] map_manager is running, skipping")
+            return
+
+        if __main__.check_for_popup_window(__main__.gApp) == True:
+            __main__.error_logs(f"[folder_watcher] popup window is open, skipping")
+            return
         on_maps_changed(event)
 
 def main_watcher():

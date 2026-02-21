@@ -19,7 +19,7 @@ def map_update_worker():
         __main__.map_extractor
     """
     try:
-        urls = __main__.archive_maps()
+        urls = __main__.archive_maps(__main__.ginternetArchiveIdentifier)
 
         maps_dir = __main__.Path(__main__.os.getcwd()) / "maps"
         maps_dir.mkdir(exist_ok=True)
@@ -43,3 +43,5 @@ def map_update_worker():
         __main__.error_logs(f"[map_update_worker] Error in download thread: {e}", "error")
 
     __main__.stopThread()
+    __main__.gUpdateWindow.withdraw()
+    __main__.map_manager()

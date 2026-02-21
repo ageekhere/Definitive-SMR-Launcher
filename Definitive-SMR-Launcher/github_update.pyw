@@ -21,6 +21,7 @@ def github_update():
                 # Create a popup window
                 popup = __main__.ctk.CTkToplevel(__main__.gApp)
                 popup.title("New Update")
+                popup.resizable(0, 0)
                 # Define popup dimensions
                 popup_width = 300
                 popup_height = 100

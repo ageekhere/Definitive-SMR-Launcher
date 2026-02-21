@@ -68,4 +68,4 @@ def map_extractor():
     except Exception as e:
         __main__.error_logs(f"[map_extractor] Error extracting files: {e}", "error")
     __main__.error_logs("[map_extractor] Finished", "info")
-    __main__.gUpdateWindow.withdraw()
+    

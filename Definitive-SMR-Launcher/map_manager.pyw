@@ -7,28 +7,48 @@ Uses globals and libraries imported in main.py.
 
 import __main__
 
+last_call_time = 0
+throttle_interval = 2000  # milliseconds (1 second)
 def map_manager():
+    global last_call_time
+    now = int(__main__.time.time() * 1000)
+    #if (now - last_call_time < throttle_interval):
+    #    return
+    last_call_time = now
+
     __main__.threading.Thread(
         target=map_manager_thread,
+        name="map_manager",
         daemon=True
     ).start()
 
 def map_manager_thread():
-    __main__.error_logs("[map_manager] Add maps to interface", "info")
+    __main__.gMapMangerTheadRunning = True
+    __main__.error_logs("[map_manager_thread] Add maps to interface", "info")
+    if __main__.gDownloadingMapStatus == True:
+        __main__.error_logs("[map_manager_thread] Skipping interface update", "info")
+        __main__.gMapMangerTheadRunning = False
+        return
 
     maps_directory = "maps"
-    grid_width = 4
-    thumb_size = (233, 233)
+    image_size = 233
+    spacing = 10
+    effective_width = image_size + spacing
+    grid_width = __main__.gScrollable_frame.winfo_width() // effective_width
+
+    #grid_width = 4
+    thumb_size = (image_size, image_size)
     row = col = 0
     thumbnails = []
 
     for path in __main__.gGameDocs.rglob("*"):
         if path.is_symlink():
-            __main__.error_logs(f"[map_manager] Removing symlink: {path}", "info")
+            __main__.error_logs(f"[map_manager_thread] Removing symlink: {path}", "info")
             path.unlink()
             __main__.gRemoveSymlink.configure(state="disabled")
 
     for map_folder in __main__.os.listdir(maps_directory):
+
         folder_path = __main__.os.path.join(maps_directory, map_folder)
         if not __main__.os.path.isdir(folder_path):
             continue
@@ -57,7 +77,7 @@ def map_manager_thread():
                     __main__.gRemoveSymlink.configure(state="normal")
                     for path in __main__.gGameDocs.rglob("*"):
                         if path.is_symlink():
-                            __main__.error_logs(f"[map_manager] Removing symlink: {path}", "info")
+                            __main__.error_logs(f"[map_manager_thread] Removing symlink: {path}", "info")
                             path.unlink()
 
                     source_path = __main__.os.path.join(__main__.gUsermap_path, m)
@@ -71,14 +91,14 @@ def map_manager_thread():
                     maps_directory = __main__.Path(__main__.os.path.join(__main__.os.getcwd(), "maps", m))
 
                     count = 0
-                    __main__.error_logs("[map_manager] Touching all files for map " + str(m), "info")
+                    __main__.error_logs("[map_manager_thread] Touching all files for map " + str(m), "info")
                     for files in maps_directory.rglob("*"):  # recursive search
                         try:
                             # Update the file timestamp (acts like `touch`)
                             __main__.os.utime(files, None)
                             count += 1
                         except Exception as e:
-                            __main__.error_logs(f"[map_manager] Error touching {files}: {e}", "error")
+                            __main__.error_logs(f"[map_manager_thread] Error touching {files}: {e}", "error")
 
                 btn = __main__.ctk.CTkButton(
                     __main__.gScrollable_frame,
@@ -89,7 +109,7 @@ def map_manager_thread():
                     fg_color="transparent"
                 )
                 btn.configure(command=lambda m=map_folder, b=btn: map_click(m, b))
-                btn.grid(row=row, column=col, padx=5, pady=7,sticky="n")
+                btn.grid(row=row, column=col, padx=0, pady=7,sticky="n")
 
                 def ellipsize(text, max_chars):
                     if len(text) <= max_chars:
@@ -99,7 +119,7 @@ def map_manager_thread():
                 info_btn_color = "#1f6aa5"
                 info_btn_textcolor = "#ffffff"
 
-                display_text = ellipsize(map_folder, 99)
+                display_text = ellipsize(map_folder,25)
                 map_name = map_folder
 
                 if __main__.get_map_data(map_name, __main__.gMap_rating_matrix,"id") != None:
@@ -160,7 +180,7 @@ def map_manager_thread():
                     font=btn_font,
                     command=__main__.partial(__main__.map_info_manager, map_folder)
                 )
-                info_btn.grid(row=row, column=col, padx=5, pady=7,sticky="n")
+                info_btn.grid(row=row, column=col, padx=3, pady=7,sticky="n")
 
                 col += 1
                 if col >= grid_width:
@@ -168,10 +188,11 @@ def map_manager_thread():
                     row += 2
 
             except Exception as e:
-                __main__.error_logs(f"[map_manager] Failed to load {image_path}: {e}", "error")
+                __main__.error_logs(f"[map_manager_thread] Failed to load {image_path}: {e}", "error")
 
     # Check for missing maps
     missing_maps = __main__.map_checker()
 
     if missing_maps == ([], []):
         __main__.gUpdate_maps_button.configure(state="disabled")
+    __main__.gMapMangerTheadRunning = False

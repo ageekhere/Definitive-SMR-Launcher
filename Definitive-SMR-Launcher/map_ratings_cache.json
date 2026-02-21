@@ -1,0 +1,294 @@
+{
+  "The_Everglades_v1_00": {
+    "map_name": "The Everglades",
+    "url": "3",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Africa_Challenge_v1_01": {
+    "map_name": "Africa Challenge",
+    "url": "6",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "4_Rivers_Conversion_v1_00": {
+    "map_name": "4 Rivers Conversion",
+    "url": "9",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "A_Tycoon's_Tale_v1_00": {
+    "map_name": "A Tycoon's Tale",
+    "url": "10",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Aberdeen_Carolina_&_Western_RR_v1_00": {
+    "map_name": "Aberdeen Carolina & Western RR",
+    "url": "12",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Africa_Diamonds_v1_01": {
+    "map_name": "Africa Diamonds",
+    "url": "14",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alaska_Early_v1_01": {
+    "map_name": "Alaska Early",
+    "url": "15",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alaska_v1_00": {
+    "map_name": "Alaska",
+    "url": "16",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alternate_Balkans_v1_00": {
+    "map_name": "Alternate Balkans",
+    "url": "17",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alternate_Germany_Universe_v1_00": {
+    "map_name": "Alternate Germany Universe",
+    "url": "18",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Alternate_United_Kingdom_v1_00": {
+    "map_name": "Alternate United Kingdom",
+    "url": "19",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "America_v1_00": {
+    "map_name": "America",
+    "url": "21",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "America_v1_01": {
+    "map_name": "America",
+    "url": "21",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Appalachia_Rails_v1_00": {
+    "map_name": "Appalachia Rails",
+    "url": "22",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
+  "America_Revision_2_v1_00": {
+    "map_name": "America Revision 2",
+    "url": "23",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "America_Revision_3_v1_00": {
+    "map_name": "America Revision 3",
+    "url": "24",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Amerigonia_Duals_v1_00": {
+    "map_name": "Amerigonia Duals",
+    "url": "25",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Amerigonia_v1_00": {
+    "map_name": "Amerigonia",
+    "url": "28",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Arabia_v1_00": {
+    "map_name": "Arabia",
+    "url": "29",
+    "is_stable": "n",
+    "multiplayer": "y"
+  },
+  "Arizona_Rails_v1_01": {
+    "map_name": "Arizona Rails",
+    "url": "30",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
+  "Attica5_v1_00": {
+    "map_name": "Attica 5",
+    "url": "31",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
+  "Australia_2_v1_00": {
+    "map_name": "Australia 2",
+    "url": "32",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Australia_3_v1_01": {
+    "map_name": "Australia 3",
+    "url": "33",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "AZ_Canyon_V02_v1_00": {
+    "map_name": "AZ Canyon V02",
+    "url": "34",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Austrian_Hungarian_Monarchy_v1_00": {
+    "map_name": "Austrian Hungarian Monarchy",
+    "url": "35",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
+  "Basin_And_Range_v1_00": {
+    "map_name": "Basin And Range",
+    "url": "36",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "blank": {
+    "map_name": "",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": ""
+  },
+  "9": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "24": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "21": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "25": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "28": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "22": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "29": [
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "100%",
+    "(0.00/5.0)",
+    "Unknown"
+  ],
+  "30": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "31": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "32": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "33": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "35": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ],
+  "36": [
+    "100%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "0%",
+    "(5.00/5.0)",
+    "1"
+  ]
+}

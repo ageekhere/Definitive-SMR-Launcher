@@ -1,26 +1,21 @@
-#logger.pyw
+# logger.pyw
 import __main__
 
 def error_logs(message: str, level: str = "info"):
+    MAX_LOGS = 1000
     """
-    Append a debug message to the global gLogs string in the main script.
-
-    This function does not keep its own copy of gLogs. Instead, it directly
-    modifies the variables defined in the __main__ module.
+    Append a message to the main log with color coding and optional debug printing.
 
     Args:
-        errorMessage (str): The message to append to the log.
+        message (str): The log message.
+        level (str): Log level: "info", "warning", "error". Default is "info".
     """
 
-    # Import the __main__ module so we can access variables defined there
-    # (__main__ is the special name Python assigns to the top-level script).
-    
-    # Check if debugging is enabled in the main script by looking for gDebug.
-    # If gDebug is True, print the log.
+    # --- Debug print ---
     if getattr(__main__, "gDebug", True):
-        print(message)
+        print(f"[{level.upper()}] {message}")
 
-    # Map log levels to colors
+    # --- Map log levels to colors ---
     color_map = {
         "info": "green",
         "warning": "yellow",
@@ -28,14 +23,44 @@ def error_logs(message: str, level: str = "info"):
     }
     color = color_map.get(level.lower(), "green")
 
-    # Initialize gLogs if it doesn't exist
-    if not hasattr(__main__, "gLogs"):
+    # --- Ensure gLogs exists ---
+    if not hasattr(__main__, "gLogs") or __main__.gLogs is None:
         __main__.gLogs = []
 
-    if hasattr(__main__, "gLog_button") and __main__.gLog_button is not None and level == "error":
-        __main__.gLog_button.configure(fg_color="red", hover_color="#cc0000")
+    # --- Update UI button for errors safely ---
+    try:
+        log_button = getattr(__main__, "gLog_button", None)
+        if log_button is not None and level.lower() == "error":
+            log_button.configure(fg_color="red", hover_color="#cc0000")
+    except Exception:
+        pass  # ignore if UI not initialized yet
 
-    # Append the message to gLogs in the main script, followed by a newline.
+    # --- Append to gLogs ---
     __main__.gLogs.append((message, color))
-    if(__main__.gLogWindow != None):
-        __main__.debug_window()
+    if len(__main__.gLogs) > MAX_LOGS:
+        for i, (_, c) in enumerate(__main__.gLogs):
+            if c == "green":
+                __main__.gLogs.pop(i)
+                break
+        else:
+            # If no green found, remove oldest entry
+            __main__.gLogs.pop(0)
+
+    # --- Update log window safely ---
+    #try:
+    #    if getattr(__main__, "gLogWindow", None) is not None:
+    #        __main__.debug_window()
+    #except Exception:
+    #    pass
+    safe_update_log_window()
+# --- Update log window safely, max once per second ---
+def safe_update_log_window():
+    try:
+        now = __main__.time.time()
+        last = getattr(__main__, "_last_log_update", 0)
+        if now - last >= 1:  # 1 second has passed
+            __main__._last_log_update = now
+            if getattr(__main__, "gLogWindow", None) is not None:
+                __main__.debug_window()
+    except Exception:
+        pass

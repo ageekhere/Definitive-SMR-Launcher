@@ -20,7 +20,9 @@ def debug_window():
     # Otherwise create new window
     __main__.error_logs("[debug_window] Opening Log window", "info")
     __main__.gLogWindow = __main__.ctk.CTkToplevel(__main__.gApp)
-    __main__.gLogWindow.title("Logs")
+    __main__.gLogWindow.title(__main__.get_text("gLog_button"))
+    __main__.gLogWindow.resizable(0, 0)
+    
 
     width, height = 800, 600
 
@@ -34,12 +36,9 @@ def debug_window():
 
     # Apply geometry with center position
     __main__.gLogWindow.geometry(f"{width}x{height}+{x}+{y}")
-
-    #__main__.create_icon(__main__.sys, __main__.gLogWindow)
+    __main__.create_icon(__main__.sys, __main__.gLogWindow)
 
     __main__.gLogWindow.attributes("-topmost", True)
-
-
 
     # Reset gLogWindow when closed
     def on_close():

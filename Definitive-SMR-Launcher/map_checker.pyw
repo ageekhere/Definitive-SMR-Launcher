@@ -6,10 +6,13 @@ Uses globals and imports from main.py.
 """
 
 import __main__  # Access main's globals and imports
-
+from update_maps_timer import update_maps_timer
 def map_checker():
     __main__.error_logs("[map_checker] Checking for map updates" , "info")
-    urls = __main__.archive_maps()
+
+    urls = __main__.archive_maps(__main__.ginternetArchiveIdentifier)
+    if urls == None or not urls:
+        return
 
     maps_dir_path = __main__.Path(__main__.os.getcwd()) / "maps"
     download_dir_path = __main__.Path(__main__.os.getcwd()) / "downloads"
@@ -19,6 +22,7 @@ def map_checker():
 
     # --- Online check loop: missing maps that need download ---
     urls_to_download = []
+
     for filename, url in urls:
         map_name = filename.replace(".7z", "")
         folder_exists = (maps_dir_path / map_name).exists()
@@ -46,6 +50,5 @@ def map_checker():
         __main__.error_logs("[map_checker] No New maps to download " , "info")
     else:
         __main__.gUpdate_maps_button.configure(state="normal")
-        
-        
+    update_maps_timer()
     return urls_to_download, files_to_extract

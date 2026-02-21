@@ -1,4 +1,10 @@
 import __main__ # Import the __main__ module so we can access variables and functions defined in the main script
+from error_logs import error_logs
+from pathlib import Path
+from configparser import ConfigParser
+
+gConfigPath = None
+gConfigUserData = None
 
 def read_write_config(fileAction: str) -> None:
     """
@@ -14,31 +20,33 @@ def read_write_config(fileAction: str) -> None:
     Raises:
         ValueError: If fileAction is not "r" or "w".
     """
-    __main__.error_logs("[read_write_config] accessing config file", "info")
+    global gConfigPath
+    global gConfigUserData
+    error_logs("[read_write_config] accessing config file", "info")
 
     if fileAction not in ("r", "w"):
-        __main__.error_logs("[read_write_config] invalid input option", "error")
+        error_logs("[read_write_config] invalid input option", "error")
         raise ValueError("Invalid option: must be 'r' or 'w'")
 
     try:
         if fileAction == "w":
             # Ensure the parent folder (e.g., "config/") exists before writing
-            __main__.gConfigPath.parent.mkdir(parents=True, exist_ok=True)
+            gConfigPath.parent.mkdir(parents=True, exist_ok=True)
 
-            with open(__main__.gConfigPath, "w") as pConfigfile:
-                __main__.gConfigUserData.write(pConfigfile)
-                __main__.error_logs(f"[read_write_config] Successfully wrote to {__main__.gConfigPath}", "info")
+            with open(gConfigPath, "w") as pConfigfile:
+                gConfigUserData.write(pConfigfile)
+                error_logs(f"[read_write_config] Successfully wrote to {gConfigPath}", "info")
 
         elif fileAction == "r":
-            __main__.gConfigUserData.read(__main__.gConfigPath)
-            __main__.error_logs(f"[read_write_config] Successfully read from {__main__.gConfigPath}", "info")
+            gConfigUserData.read(gConfigPath)
+            error_logs(f"[read_write_config] Successfully read from {gConfigPath}", "info")
 
     except PermissionError:
-        __main__.error_logs(f"[read_write_config] Permission denied: {__main__.gConfigPath}", "error")
+        error_logs(f"[read_write_config] Permission denied: {gConfigPath}", "error")
     except FileNotFoundError:
-        __main__.error_logs(f"[read_write_config] File not found: {__main__.gConfigPath}", "error")
+        error_logs(f"[read_write_config] File not found: {gConfigPath}", "error")
     except Exception as e:
-        __main__.error_logs(f"[read_write_config] Cannot access {__main__.gConfigPath}: {e}", "error")
+        error_logs(f"[read_write_config] Cannot access {gConfigPath}: {e}", "error")
 
 def make_config() -> None:
     """
@@ -51,18 +59,20 @@ def make_config() -> None:
         gConfigUserInfo (SectionProxy): USERINFO section of config.
         gGamePath (str): Game path location.
     """
-    __main__.error_logs("[make_config] Setting up user config.ini", "info")
+    global gConfigPath
+    global gConfigUserData
+    error_logs("[make_config] Setting up user config.ini", "info")
 
-    __main__.gConfigUserData = __main__.ConfigParser()
-    __main__.gConfigPath = __main__.Path("config/config.ini")
+    gConfigUserData = ConfigParser()
+    gConfigPath = Path("config/config.ini")
 
     try:
-        if __main__.gConfigPath.is_file():
-            __main__.error_logs("[make_config] config.ini exists, reading file", "info")
+        if gConfigPath.is_file():
+            error_logs("[make_config] config.ini exists, reading file", "info")
             read_write_config("r")
         else:
-            __main__.error_logs("[make_config] creating new config.ini with defaults", "info")
-            __main__.gConfigUserData["USERINFO"] = {
+            error_logs("[make_config] creating new config.ini with defaults", "info")
+            gConfigUserData["USERINFO"] = {
                 "gamepath": __main__.gGamePath,
                 "customdifficulty": "0",
                 "enableopenspy": "0",
@@ -86,17 +96,17 @@ def make_config() -> None:
         read_write_config("r")
 
         # Cache USERINFO section into globals for quick access
-        __main__.gConfigUserInfo = __main__.gConfigUserData["USERINFO"]
+        __main__.gConfigUserInfo = gConfigUserData["USERINFO"]
         __main__.gGamePath = __main__.gConfigUserInfo.get("gamepath", "")
 
     except PermissionError:
-        __main__.error_logs("[make_config] PermissionError: Could not access config file", "error")
+        error_logs("[make_config] PermissionError: Could not access config file", "error")
     except FileNotFoundError:
-        __main__.error_logs("[make_config] FileNotFoundError: Config path not found", "error")
+        error_logs("[make_config] FileNotFoundError: Config path not found", "error")
     except OSError as e:
-        __main__.error_logs(f"[make_config] OSError: {e}", "error")
+        error_logs(f"[make_config] OSError: {e}", "error")
     except Exception as e:
-        __main__.error_logs(f"[make_config] Unexpected Exception: {e}", "error")
+        error_logs(f"[make_config] Unexpected Exception: {e}", "error")
 
 
 # -------------------------------------------------------------------
@@ -117,7 +127,7 @@ def get_config_value(key: str, default: str = "") -> str:
     try:
         return __main__.gConfigUserInfo.get(key, default)
     except Exception:
-        __main__.error_logs(f"[get_config_value] Missing key '{key}', returning default='{default}'", "warning")
+        error_logs(f"[get_config_value] Missing key '{key}', returning default='{default}'", "warning")
         return default
 
 def set_config_value(key: str, value: str) -> None:
@@ -129,18 +139,19 @@ def set_config_value(key: str, value: str) -> None:
         value (str): The new value to assign.
 
     Side Effects:
-        - Updates __main__.gConfigUserData and gConfigUserInfo.
+        - Updates gConfigUserData and gConfigUserInfo.
         - Persists the change to config/config.ini.
     """
+    global gConfigUserData
     try:
-        __main__.gConfigUserData.set("USERINFO", key, value)
+        gConfigUserData.set("USERINFO", key, value)
         read_write_config("w")  # Save updated config
-        __main__.gConfigUserInfo = __main__.gConfigUserData["USERINFO"]  # Refresh
-        __main__.error_logs(f"[set_config_value] Updated '{key}' to '{value}'", "info")
+        __main__.gConfigUserInfo = gConfigUserData["USERINFO"]  # Refresh
+        error_logs(f"[set_config_value] Updated '{key}' to '{value}'", "info")
 
         # Special case: if updating gamepath, also refresh global gGamePath
         if key == "gamepath":
             __main__.gGamePath = value
 
     except Exception as e:
-        __main__.error_logs(f"[set_config_value] Failed to update '{key}': {e}", "error")
+        error_logs(f"[set_config_value] Failed to update '{key}': {e}", "error")

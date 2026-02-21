@@ -3,9 +3,9 @@ import time
 import urllib3
 import json
 import os
+import ast
 
 import __main__
-
 # -----------------------------
 # Configuration
 # -----------------------------
@@ -19,13 +19,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # -----------------------------
 # Internal cache
 # -----------------------------
-_last_fetch = 0
+
 _cached_matrix = None
 
 # -----------------------------
 # Loader function
 # -----------------------------
 def load_map_ratings_matrix(force_refresh=False):
+    __main__.error_logs("[load_map_ratings_matrix] Loading cache", "info")
+
     """
     Returns the map ratings as a matrix:
     [
@@ -37,13 +39,25 @@ def load_map_ratings_matrix(force_refresh=False):
     ]
     Downloads JSON from GitHub but caches for 1 hour.
     """
-    global _last_fetch, _cached_matrix
+    #global _cached_matrix
+    option1_text = __main__.get_config_value("option1")
+    option2_text = __main__.get_config_value("option2")
+
+    if option2_text != "" and option2_text !=" ":
+        _cached_matrix = ast.literal_eval(option2_text)
+
+    if option1_text == "":
+        _last_fetch = 0
+    else: 
+        _last_fetch = float(option1_text)
 
     now = time.time()
 
     # Use in-memory cache if valid
-    if not force_refresh and _cached_matrix and (now - _last_fetch) < CACHE_SECONDS:
-        return _cached_matrix
+    if option2_text !="" and option2_text !=" ":
+        if not force_refresh and _cached_matrix and (now - _last_fetch) < CACHE_SECONDS:
+            __main__.error_logs("[load_map_ratings_matrix] Loading map cache", "info")
+            return _cached_matrix
 
     # Try downloading JSON from GitHub
     data = None
@@ -77,15 +91,18 @@ def load_map_ratings_matrix(force_refresh=False):
     urls = []
     is_stable = []
     multiplayer = []
+    try:
+        for map_id, info in data.items():
+            map_ids.append(map_id)
+            map_names.append(info.get("map_name", map_id))  # fallback to ID
+            urls.append(info.get("url", ""))
+            is_stable.append(info.get("is_stable", ""))    # fallback empty
+            multiplayer.append(info.get("multiplayer", ""))  # fallback empty
 
-    for map_id, info in data.items():
-        map_ids.append(map_id)
-        map_names.append(info.get("map_name", map_id))  # fallback to ID
-        urls.append(info.get("url", ""))
-        is_stable.append(info.get("is_stable", ""))    # fallback empty
-        multiplayer.append(info.get("multiplayer", ""))  # fallback empty
-
-    _cached_matrix = [map_ids, map_names, urls, is_stable, multiplayer]
-    _last_fetch = now
-
+        _cached_matrix = [map_ids, map_names, urls, is_stable, multiplayer]
+        __main__.set_config_value("option2", str(_cached_matrix))
+        _last_fetch = now
+        __main__.set_config_value("option1", str(_last_fetch))
+    except Exception as e:
+        __main__.error_logs("[load_map_ratings_matrix] Error reading data"+str(e), "error")        
     return _cached_matrix
