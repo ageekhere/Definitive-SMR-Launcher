@@ -1,5 +1,5 @@
 # Definitive-SMR-Launcher
-<img width="1259" height="713" alt="Screenshot 2026-01-18 175337" src="https://github.com/user-attachments/assets/b8c3f168-92e7-4f00-a13b-3bbad9df5155" />
+<img width="1914" height="996" alt="interface" src="https://github.com/user-attachments/assets/bcd5bcad-4acf-408c-a1d4-504c0a8f4c7b" />
 
 All aboard, aspiring tycoon! Definitive-SMR-Launcher puts the full power of the rails in your hands, taking your Sid Meier’s Railroads! experience to the next level. Whether you’re laying your first tracks or expanding a sprawling empire, this launcher keeps your engines running smoothly and your journeys exciting:
 
