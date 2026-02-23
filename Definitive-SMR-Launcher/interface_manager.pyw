@@ -22,6 +22,7 @@ def interface_manager(os,ctk):
     __main__.gStart_button = __main__.ctk.CTkButton(__main__.gApp, text=__main__.get_text("gStart_button"), command=__main__.game_launcher, corner_radius=0) # Start Game Button
     __main__.gGamePath_button = __main__.ctk.CTkButton(__main__.gApp, text=__main__.get_text("gGamepath_button"), corner_radius=0, command=__main__.gamepath_manager) # Set Game Path Button
     __main__.gUpdate_maps_button = __main__.ctk.CTkButton(__main__.gApp, text=__main__.get_text("gUpdate_maps_button"),corner_radius=0,fg_color="green",width=250, command=__main__.map_updater) # Update Maps Button # Lang key: gUpdate_maps_button
+    __main__.gUpdate_maps_button.configure(state="disabled")
     __main__.gGameLocation_label = __main__.ctk.CTkLabel(__main__.gApp, text=__main__.get_text("gGameLocation_label")) # Game Path Label
     __main__.gRemoveSymlink = __main__.ctk.CTkButton(__main__.gApp, text=__main__.get_text("gRemoveSymlink"), corner_radius=0, command=unload_map)
     __main__.downnload_audio_lang = __main__.ctk.CTkButton(__main__.gApp, text="⭳", corner_radius=0,width=30, command=__main__.download_voice) 

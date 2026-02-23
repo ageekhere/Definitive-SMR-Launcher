@@ -56,8 +56,8 @@ def check_smrailroads():
             f"{get_text('PlayersInGame')} "
             f"{__main__.gPlayersInGame})"
         )
-        error_logs("[check_openspy] There are " + __main__.gOnlineServers + 
-            " servers with " + __main__.gPlayersInGame + " In Game Players", "info")
+        error_logs("[check_openspy] There are " + str(__main__.gOnlineServers) + 
+            " servers with " + str(__main__.gPlayersInGame) + " In Game Players", "info")
 
     except requests.RequestException as e:
         error_logs("[check_openspy] Cannot find servers.jso " + str(e), "warning")

@@ -56,4 +56,5 @@ def archive_maps_thread(identifier):
         for fileinfo in data.get("files", [])
         if fileinfo.get("name", "").lower().endswith(".7z")
     ]
+    map_checker()
     error_logs(f"[archive_maps] Found {len(_urls)} .7z files for {identifier}", "info")

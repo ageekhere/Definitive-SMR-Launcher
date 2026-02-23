@@ -51,4 +51,5 @@ def map_checker():
     else:
         __main__.gUpdate_maps_button.configure(state="normal")
     update_maps_timer()
+
     return urls_to_download, files_to_extract

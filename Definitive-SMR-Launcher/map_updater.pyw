@@ -9,6 +9,11 @@ import __main__  # Access main's globals and imports
 
 
 def map_updater():
+    if __main__.gNewDownloadMaps == None:
+        __main__.gUpdate_maps_button.configure(state="disabled")
+    else:
+        __main__.gUpdate_maps_button.configure(state="normal")
+
     status = "y" if __main__.is_map_manager_running() else "n"
     if status =="y": 
         __main__.messagebox.showinfo(__main__.get_text("LoadingMaps"), __main__.get_text("PleaseWait"))
@@ -18,6 +23,7 @@ def map_updater():
       - Maps missing online (need to download)
       - Maps downloaded but not extracted (local)
     """
+
     try:
         # --- Create new popup and store reference ---
         __main__.gUpdateWindow = __main__.ctk.CTkToplevel()
@@ -29,6 +35,9 @@ def map_updater():
 
         # Keep popup always on top
         __main__.gUpdateWindow.attributes("-topmost", True)
+
+        __main__.gUpdateWindow.grab_set()        # Block interaction with main window
+        __main__.gUpdateWindow.focus()
 
         # Center relative to the main window
         master = __main__.gUpdateWindow.master
