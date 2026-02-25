@@ -155,6 +155,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Australia_FV1_v1_00": {
+    "map_name": "Australia FV1",
+    "url": "39",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
