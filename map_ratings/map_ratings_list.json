@@ -161,6 +161,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Australia_v1_00": {
+    "map_name": "Australia",
+    "url": "41",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
