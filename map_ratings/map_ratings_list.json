@@ -155,6 +155,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Basin_And_Range_Revision_2_v1_00": {
+    "map_name": "Basin And Range Revision 2",
+    "url": "40",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
