@@ -167,6 +167,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "BC_Gold_v1_00": {
+    "map_name": "BC Gold",
+    "url": "42",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
