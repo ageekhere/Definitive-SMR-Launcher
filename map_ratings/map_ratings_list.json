@@ -65,12 +65,6 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "America_v1_00": {
-    "map_name": "America",
-    "url": "21",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
   "America_v1_01": {
     "map_name": "America",
     "url": "21",
