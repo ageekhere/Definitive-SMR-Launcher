@@ -179,6 +179,60 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Borneo_Island_Map_v1_00": {
+    "map_name": "Borneo Island Map",
+    "url": "45",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Brazil_v1_00": {
+    "map_name": "Brazil",
+    "url": "46",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "CADIZ_v1_00": {
+    "map_name": "CADIZ",
+    "url": "47",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Cajun_Country_v1_00": {
+    "map_name": "Cajun Country",
+    "url": "48",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "California_Sam_v1_00": {
+    "map_name": "California Sam",
+    "url": "49",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Canadian_Pacific_v1_00": {
+    "map_name": "Canadian Pacific SAM",
+    "url": "50",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Central_Andes_v1_00": {
+    "map_name": "Central Andes",
+    "url": "51",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Central_Mexico_2_v1_00": {
+    "map_name": "Central Mexico 2",
+    "url": "52",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Chicago_to_the_Rockies_v1_00": {
+    "map_name": "Chicago to the Rockies",
+    "url": "53",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
   "blank": {
     "map_name": "",
     "url": "",
