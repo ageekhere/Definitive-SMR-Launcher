@@ -419,6 +419,12 @@
     "is_stable": "",
     "multiplayer": "y"
   },
+  "Haldimand_Norfolk_v1_00": {
+    "map_name": "Haldimand Norfolk",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
   "Haldimand_Norfolk_v1_01": {
     "map_name": "Haldimand Norfolk",
     "url": "",
@@ -1013,7 +1019,19 @@
     "is_stable": "",
     "multiplayer": "n"
   },
+  "The_Emerald_Coast_v1_01": {
+    "map_name": "The Emerald Coast",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
   "The_Everglades_v1_00": {
+    "map_name": "The Everglades",
+    "url": "3",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "The_Everglades_v1_01": {
     "map_name": "The Everglades",
     "url": "3",
     "is_stable": "y",
@@ -1103,7 +1121,7 @@
     "is_stable": "",
     "multiplayer": "y"
   },
-  "Utah_2_v1_00": {
+  "Utah_v1_00": {
     "map_name": "Utah 2",
     "url": "",
     "is_stable": "",
