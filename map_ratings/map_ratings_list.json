@@ -1,19 +1,13 @@
 {
-  "The_Everglades_v1_00": {
-    "map_name": "The Everglades",
-    "url": "3",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
-  "Africa_Challenge_v1_01": {
-    "map_name": "Africa Challenge",
-    "url": "6",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
   "4_Rivers_Conversion_v1_00": {
     "map_name": "4 Rivers Conversion",
     "url": "9",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "AZ_Canyon_V02_v1_00": {
+    "map_name": "AZ Canyon V02",
+    "url": "34",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -26,6 +20,12 @@
   "Aberdeen_Carolina_&_Western_RR_v1_00": {
     "map_name": "Aberdeen Carolina & Western RR",
     "url": "12",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Africa_Challenge_v1_01": {
+    "map_name": "Africa Challenge",
+    "url": "6",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -65,18 +65,6 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "America_v1_01": {
-    "map_name": "America",
-    "url": "21",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
-  "Appalachia_Rails_v1_00": {
-    "map_name": "Appalachia Rails",
-    "url": "22",
-    "is_stable": "y",
-    "multiplayer": "n"
-  },
   "America_Revision_2_v1_00": {
     "map_name": "America Revision 2",
     "url": "23",
@@ -86,6 +74,12 @@
   "America_Revision_3_v1_00": {
     "map_name": "America Revision 3",
     "url": "24",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "America_v1_01": {
+    "map_name": "America",
+    "url": "21",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -100,6 +94,12 @@
     "url": "28",
     "is_stable": "y",
     "multiplayer": "y"
+  },
+  "Appalachia_Rails_v1_00": {
+    "map_name": "Appalachia Rails",
+    "url": "22",
+    "is_stable": "y",
+    "multiplayer": "n"
   },
   "Arabia_v1_00": {
     "map_name": "Arabia",
@@ -131,33 +131,9 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
-  "AZ_Canyon_V02_v1_00": {
-    "map_name": "AZ Canyon V02",
-    "url": "34",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
-  "Austrian_Hungarian_Monarchy_v1_00": {
-    "map_name": "Austrian Hungarian Monarchy",
-    "url": "35",
-    "is_stable": "y",
-    "multiplayer": "n"
-  },
-  "Basin_And_Range_v1_00": {
-    "map_name": "Basin And Range",
-    "url": "36",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
   "Australia_FV1_v1_00": {
     "map_name": "Australia FV1",
     "url": "39",
-    "is_stable": "y",
-    "multiplayer": "y"
-  },
-  "Basin_And_Range_Revision_2_v1_00": {
-    "map_name": "Basin And Range Revision 2",
-    "url": "40",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -167,9 +143,27 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Austrian_Hungarian_Monarchy_v1_00": {
+    "map_name": "Austrian Hungarian Monarchy",
+    "url": "35",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "BC_Gold_v1_00": {
     "map_name": "BC Gold",
     "url": "42",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Basin_And_Range_Revision_2_v1_00": {
+    "map_name": "Basin And Range Revision 2",
+    "url": "40",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Basin_And_Range_v1_00": {
+    "map_name": "Basin And Range",
+    "url": "36",
     "is_stable": "y",
     "multiplayer": "y"
   },
@@ -201,7 +195,7 @@
     "map_name": "Cajun Country",
     "url": "48",
     "is_stable": "y",
-    "multiplayer": "y"
+    "multiplayer": "n"
   },
   "California_Sam_v1_00": {
     "map_name": "California Sam",
@@ -231,6 +225,996 @@
     "map_name": "Chicago to the Rockies",
     "url": "53",
     "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "Colorado_USA_v1_00": {
+    "map_name": "Colorado USA",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Connecticut_v1_00": {
+    "map_name": "Connecticut",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Dakota_Territory_v1_00": {
+    "map_name": "Dakota Territory",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Demo_Map_v1_00": {
+    "map_name": "Demo Map",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Devon_v1_00": {
+    "map_name": "Devon",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Dirty_World_v1_00": {
+    "map_name": "Dirty World",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "DogWorld_v1_00": {
+    "map_name": "Dog World",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "East_Coast_Fixed_Industries_v1_00": {
+    "map_name": "East Coast Fixed Industries",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "East_Coast_Random_Industries_v1_00": {
+    "map_name": "East Coast Random Industries",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "East_Coast_v1_00": {
+    "map_name": "East Coast",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Eastern_Ontario_v1_00": {
+    "map_name": "Eastern Ontario",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Europa2_Deluxe_Special_Version_v1_00": {
+    "map_name": "Europa2 Deluxe Special Version",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Europa2_Deluxe_Standard_Version_v1_00": {
+    "map_name": "Europa2 Deluxe Standard Version",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Europa_v1_00": {
+    "map_name": "Europa",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Europe_v1_00": {
+    "map_name": "Europe",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Flaglers_Florida_v1_00": {
+    "map_name": "Flaglers Florida",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Florida_Gold_2_v1_00": {
+    "map_name": "Florida Gold 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Florida_v1_00": {
+    "map_name": "Florida",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "FourBears_v1_00": {
+    "map_name": "Four Bears",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Four_Corners_v1_00": {
+    "map_name": "Four Corners",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "France_Alternate_Universe_v1_00": {
+    "map_name": "France Alternate Universe",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "France_Harder_Version_v1_00": {
+    "map_name": "France Harder Version",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Georgia_on_My_Mind_v1_00": {
+    "map_name": "Georgia On My Mind",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "German_East_Africa_v1_00": {
+    "map_name": "German East Africa",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "German_Empire_v1_00": {
+    "map_name": "German Empire",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Germany_Deluxe_v1_00": {
+    "map_name": "Germany Deluxe",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Gone_With_The_Wind_v1_00": {
+    "map_name": "Gone With The Wind",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Great_Britain_2_v1_00": {
+    "map_name": "Great Britain 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Great_Britain_AI_version_2_v1_00": {
+    "map_name": "Great Britain AI Version 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Great_Lakes_Rail_v1_00": {
+    "map_name": "Great Lakes Rail",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Green_Energy_Revision_2_v1_00": {
+    "map_name": "Green Energy Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Green_Mars_v1_00": {
+    "map_name": "Green Mars",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Haldimand_Norfolk_v1_00": {
+    "map_name": "Haldimand Norfolk",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Hawaii_v1_00": {
+    "map_name": "Hawaii",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Heart_of_Texas_Revision_2_v1_00": {
+    "map_name": "Heart Of Texas Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Hill_Valley_Mess_v1_00": {
+    "map_name": "Hill Valley Mess",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Hill_Valley_Steaks_v1_00": {
+    "map_name": "Hill Valley Steaks",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Himachal_2_v1_00": {
+    "map_name": "Himachal 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Holidays_in_Ohio_Toy_Trains_2_v1_00": {
+    "map_name": "Holidays In Ohio Toy Trains 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Hurricane_v1_00": {
+    "map_name": "Hurricane",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "HVR_Crash_v1_00": {
+    "map_name": "HVR Crash",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "HVR_Custom_v1_00": {
+    "map_name": "HVR Custom",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "IBERIA_Revision_2_v1_00": {
+    "map_name": "IBERIA Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "IBERIA_v1_00": {
+    "map_name": "IBERIA",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Iceland_2_v1_00": {
+    "map_name": "Iceland 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Immigrants_v1_00": {
+    "map_name": "Immigrants",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Inauguration_Special_v1_00": {
+    "map_name": "Inauguration Special",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "India_v1_00": {
+    "map_name": "India",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Italia_v1_00": {
+    "map_name": "Italia",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Japan_2_v1_00": {
+    "map_name": "Japan 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Japan_3_v1_00": {
+    "map_name": "Japan 3",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Keystone_State_v1_00": {
+    "map_name": "Keystone State",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "King_Coal_v1_00": {
+    "map_name": "King Coal",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Lake_Michigan_West_Revision_2_v1_00": {
+    "map_name": "Lake Michigan West Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Lamas_Germany_v1_00": {
+    "map_name": "Lamas Germany",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Liverpool_and_Manchester_2_v1_00": {
+    "map_name": "Liverpool And Manchester 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Liverpool_and_Manchester_3_v1_00": {
+    "map_name": "Liverpool And Manchester 3",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "LongShot_2_v1_00": {
+    "map_name": "Long Shot 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Long_Beach_v1_00": {
+    "map_name": "Long Beach",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Maritimes_v1_00": {
+    "map_name": "Maritimes",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Maryland_v1_00": {
+    "map_name": "Maryland",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Meierville_2_v1_00": {
+    "map_name": "Meierville 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Mexico_v1_00": {
+    "map_name": "Mexico",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Mid_Atlantic_States_v1_00": {
+    "map_name": "Mid Atlantic States",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Mid_Atlantic_Steam_v1_00": {
+    "map_name": "Mid Atlantic Steam",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Middle_Earth_2_v1_00": {
+    "map_name": "Middle Earth 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Middle_Earth_v1_00": {
+    "map_name": "Middle Earth",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Middle_East_2_v1_00": {
+    "map_name": "Middle East 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Midwest15_v1_00": {
+    "map_name": "Midwest15",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Midwest_Freight_v1_00": {
+    "map_name": "Midwest Freight",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Mill_Valley_v1_00": {
+    "map_name": "Mill Valley",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Minnesota_Rail_v1_00": {
+    "map_name": "Minnesota Rail",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Montana_Snow_v1_00": {
+    "map_name": "Montana Snow",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Mountain_High_Valley_Low_v1_00": {
+    "map_name": "Mountain High Valley Low",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Mud_Skippers_2_v1_00": {
+    "map_name": "Mud Skippers 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Mysterious_Island_v1_00": {
+    "map_name": "Mysterious Island",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Mystlander_v1_00": {
+    "map_name": "Mystlander",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "My_Old_Kentucky_Home_Redeaux_v1_00": {
+    "map_name": "My Old Kentucky Home Redeaux",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "My_Old_Kentucky_Home_v1_00": {
+    "map_name": "My Old Kentucky Home",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "NAFTA_Phase_II_2_v1_00": {
+    "map_name": "NAFTA Phase II 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "NAFTA_Phase_I_v1_00": {
+    "map_name": "NAFTA Phase I",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "NE_UK_Hard_v1_00": {
+    "map_name": "NE UK Hard",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_England_Big_2_v1_00": {
+    "map_name": "New England Big 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_England_v1_00": {
+    "map_name": "New England",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_Hampshire_and_Vermont_v1_00": {
+    "map_name": "New Hampshire And Vermont",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_Sosaria_v1_00": {
+    "map_name": "New Sosaria",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_South_Wales_v1_00": {
+    "map_name": "New South Wales",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_York_Central_and_The_Erie_v1_00": {
+    "map_name": "New York Central And The Erie",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "New_Zealand_v1_00": {
+    "map_name": "New Zealand",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "North_East_UK_v1_00": {
+    "map_name": "North East UK",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Northern_California_v1_00": {
+    "map_name": "Northern California",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Northern_Germany_v1_00": {
+    "map_name": "Northern Germany",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Ohio_Large_v1_00": {
+    "map_name": "Ohio Large",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Ohio_Rails_v1_00": {
+    "map_name": "Ohio Rails",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Oldenburg_v1_00": {
+    "map_name": "Oldenburg",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Orient_Express_v1_00": {
+    "map_name": "Orient Express",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Pampas_v1_00": {
+    "map_name": "Pampas",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Peace_In_The_Golden_Crescent_v1_00": {
+    "map_name": "Peace In The Golden Crescent",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Poland_v1_00": {
+    "map_name": "Poland",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rags_to_Riches_v1_00": {
+    "map_name": "Rags To Riches",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Random_Map_2_v1_00": {
+    "map_name": "Random Map 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rift_Valley_1_v1_00": {
+    "map_name": "Rift Valley 1",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rift_Valley_2_2_v1_00": {
+    "map_name": "Rift Valley 2 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rift_Valley_3_2_v1_00": {
+    "map_name": "Rift Valley 3 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rift_Valley_Revisited_2_v1_00": {
+    "map_name": "Rift Valley Revisited 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "River_Valley_v1_00": {
+    "map_name": "River Valley",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Rusia_v1_00": {
+    "map_name": "Rusia",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "San_Francisco_Bay_v1_00": {
+    "map_name": "San Francisco Bay",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Scrooge_Holiday_v1_00": {
+    "map_name": "Scrooge Holiday",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Seefra3_v1_00": {
+    "map_name": "Seefra3",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Shanghai_v1_00": {
+    "map_name": "Shanghai",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Sid's_Place_v1_00": {
+    "map_name": "Sid's Place",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Side_to_Side_2_v1_00": {
+    "map_name": "Side To Side 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Side_to_Side_3_v1_00": {
+    "map_name": "Side To Side 3",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Side_to_Side_DSC_v1_00": {
+    "map_name": "Side To Side DSC",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Side_to_Side_v1_00": {
+    "map_name": "Side To Side",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Sodor_V3_0_Random_v1_00": {
+    "map_name": "Sodor V3 0 Random",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Southern_Ontario_Deluxe_v1_00": {
+    "map_name": "Southern Ontario Deluxe",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Southern_Ontario_v1_00": {
+    "map_name": "Southern Ontario",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Spain_v1_00": {
+    "map_name": "Spain",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "St._Louis_Rails_v1_00": {
+    "map_name": "St. Louis Rails",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "St_Lawrence_River_v1_00": {
+    "map_name": "St Lawrence River",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Styx_v1_00": {
+    "map_name": "Styx",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "SudAmerica_v1_00": {
+    "map_name": "Sud America",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Super_Bowl_Express_v1_00": {
+    "map_name": "Super Bowl Express",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "SYPOR_v1_00": {
+    "map_name": "SYPOR",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Tennessee_Trains_v1_00": {
+    "map_name": "Tennessee Trains",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Texarkana_v1_00": {
+    "map_name": "Texarkana",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Texas_Lone_Star_State_v1_00": {
+    "map_name": "Texas Lone Star State",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "The_Emerald_Coast_v1_00": {
+    "map_name": "The Emerald Coast",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "The_Everglades_v1_00": {
+    "map_name": "The Everglades",
+    "url": "3",
+    "is_stable": "y",
+    "multiplayer": "y"
+  },
+  "The_Gold_King_v1_00": {
+    "map_name": "The Gold King",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "The_Great_Northern_v1_00": {
+    "map_name": "The Great Northern",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "The_Great_Northwest_v1_00": {
+    "map_name": "The Great Northwest",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "The_High_Desert_v1_00": {
+    "map_name": "The High Desert",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "The_Island_Of_Sodor_v1_00": {
+    "map_name": "The Island Of Sodor",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "The_Keystone_State_v1_00": {
+    "map_name": "The Keystone State",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "The_Union_Pacific_Revision_2_v1_00": {
+    "map_name": "The Union Pacific Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "UK2_v1_00": {
+    "map_name": "UK2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Ukraine_2_v1_00": {
+    "map_name": "Ukraine 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "UK_Harder_Version_v1_00": {
+    "map_name": "UK Harder Version",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "UK_Large_MP_v1_00": {
+    "map_name": "UK Large MP",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "UK_Lower_v1_00": {
+    "map_name": "UK Lower",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "UK_Pennies_v1_00": {
+    "map_name": "UK Pennies",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "US_Southeast_v1_00": {
+    "map_name": "US Southeast",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Utah_2_v1_00": {
+    "map_name": "Utah 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Utah_Canyons_v1_00": {
+    "map_name": "Utah Canyons",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Valencia_DSC_v1_00": {
+    "map_name": "Valencia DSC",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Valencia_v1_00": {
+    "map_name": "Valencia",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "VanCouver_Island_v1_00": {
+    "map_name": "Van Couver Island",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Volcano_Island_v1_00": {
+    "map_name": "Volcano Island",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "War_Zone_v1_00": {
+    "map_name": "War Zone",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "West_Sumatera__V3_0_v1_00": {
+    "map_name": "West Sumatera V3 0",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Western_Australia_v1_00": {
+    "map_name": "Western Australia",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Western_Kentucky_v1_00": {
+    "map_name": "Western Kentucky",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "n"
+  },
+  "Western_Russia_v1_00": {
+    "map_name": "Western Russia",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Westeros_v1_00": {
+    "map_name": "Westeros",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wisconsin_2_v1_00": {
+    "map_name": "Wisconsin 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wisconsin_v1_00": {
+    "map_name": "Wisconsin",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "WNYP_Revision_2_v1_00": {
+    "map_name": "WNYP Revision 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wolf359_v1_00": {
+    "map_name": "Wolf359",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wood_Valley_v1_00": {
+    "map_name": "Wood Valley",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wyoming_Map_v1_00": {
+    "map_name": "Wyoming Map",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Wyoming_Valley_PA_Coal_v1_00": {
+    "map_name": "Wyoming Valley PA Coal",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
+  },
+  "Zimbabwe_v1_00": {
+    "map_name": "Zimbabwe",
+    "url": "",
+    "is_stable": "",
     "multiplayer": "y"
   },
   "blank": {
