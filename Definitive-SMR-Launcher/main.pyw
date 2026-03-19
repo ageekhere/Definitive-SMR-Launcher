@@ -1,4 +1,11 @@
+"""
+Update modules
+pip install pip-review
 
+pip list --outdated
+pip-review --auto
+pip check
+"""
 # --- Standard Library Imports ---
 import os                      # File system operations
 import sys                     # System-specific parameters and functions
@@ -192,7 +199,7 @@ if __name__ == '__main__':
     gMain_font = ctk.CTkFont(family="arial", size=19, weight="bold")
 
     # ---------------------- Debug / Logging ----------------------
-    gDebug: bool = False
+    gDebug: bool = True
     gLogs: list = []
     # ---------------------- Initialization ----------------------
     # Fix Windows console Unicode issues (prevents UnicodeEncodeError with → etc.)

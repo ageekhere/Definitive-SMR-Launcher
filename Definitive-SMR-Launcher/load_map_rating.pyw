@@ -43,7 +43,7 @@ def load_map_ratings_matrix(force_refresh=False):
     option1_text = __main__.get_config_value("option1")
     option2_text = __main__.get_config_value("option2")
 
-    if option2_text != "" and option2_text !=" ":
+    if option1_text != "" and option2_text !=" ":
         _cached_matrix = ast.literal_eval(option2_text)
 
     if option1_text == "":
@@ -54,7 +54,7 @@ def load_map_ratings_matrix(force_refresh=False):
     now = time.time()
 
     # Use in-memory cache if valid
-    if option2_text !="" and option2_text !=" ":
+    if option1_text !="" and option2_text !=" ":
         if not force_refresh and _cached_matrix and (now - _last_fetch) < CACHE_SECONDS:
             __main__.error_logs("[load_map_ratings_matrix] Loading map cache", "info")
             return _cached_matrix

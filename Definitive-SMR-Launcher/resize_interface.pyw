@@ -10,6 +10,7 @@ gIsRebuildingUI = False
 def resize_interface(event):
     global resize_job
     global previous_size
+
     # FIX: Ignore events from child widgets (buttons, frames, etc.)
     if event.widget != __main__.gApp:
         return
@@ -29,12 +30,12 @@ def resize_interface(event):
 
     # Schedule new call
     __main__.gApp.unbind("<Configure>")
-
     resize_job = __main__.gApp.after(DEBOUNCE_DELAY, resize_interface_start, current_size,event)
 
 def resize_interface_start(size,event):
     global previous_size
     global gIsRebuildingUI
+
     if __main__.gMapMangerTheadRunning == True:
         __main__.gApp.bind("<Configure>",lambda event: resize_interface(event))
         __main__.gApp.after(DEBOUNCE_DELAY, resize_interface_start, size,event)
@@ -97,8 +98,7 @@ def resize_interface_start(size,event):
             if widget.winfo_exists():
                 widget.destroy()
         except Exception as e:
-            print("Destroy error:", e)
-
+            __main__.error_logs("[resize_interface_start] Destroy error " + str(e), "error")
 
     canvas_width = __main__.gInterface_canvas.winfo_width()
     canvas_height = __main__.gInterface_canvas.winfo_height()

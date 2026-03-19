@@ -36,19 +36,19 @@ def archive_maps_thread(identifier):
     global _urls
     api_url = f"https://archive.org/metadata/{identifier}" # Build the Internet Archive metadata API URL
     base_download_url = f"https://archive.org/download/{identifier}"
-    error_logs(f"[archive_maps] api_url: {api_url} base_download_url:{base_download_url}", "info")
+    error_logs(f"[archive_maps_thread] api_url: {api_url} base_download_url:{base_download_url}", "info")
     try: # Send a GET request to the Internet Archive API
-        error_logs("[archive_maps] Connecting to archive.org","info")
+        error_logs("[archive_maps_thread] Connecting to archive.org","info")
         resp = requests.get(api_url, timeout=MAX_TIMEOUT) # Request with a timeout
-        error_logs("[archive_maps] Collecting resp","info")
+        error_logs("[archive_maps_thread] Collecting resp","info")
         resp.raise_for_status() # Raise an exception if the HTTP status is not 200 OK
         data = resp.json() # Parse the JSON response into a Python dictionary
-        error_logs("[archive_maps] Collecting data from resp","info")
+        error_logs("[archive_maps_thread] Collecting data from resp","info")
     except requests.exceptions.RequestException as e:
-        error_logs(f"[archive_maps] Connection error: {e}", "error")
+        error_logs(f"[archive_maps_thread] Connection error: {e}", "error")
         return []
     except Exception as e:
-        error_logs(f"[archive_maps] JSON decoding failed: {e}", "error")
+        error_logs(f"[archive_maps_thread] JSON decoding failed: {e}", "error")
         return [] # Return an empty list if something goes wrong
     # Using a list comprehension
     _urls = [
@@ -57,4 +57,4 @@ def archive_maps_thread(identifier):
         if fileinfo.get("name", "").lower().endswith(".7z")
     ]
     map_checker()
-    error_logs(f"[archive_maps] Found {len(_urls)} .7z files for {identifier}", "info")
+    error_logs(f"[archive_maps_thread] Found {len(_urls)} .7z files for {identifier}", "info")
