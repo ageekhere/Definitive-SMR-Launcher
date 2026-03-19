@@ -419,12 +419,6 @@
     "is_stable": "",
     "multiplayer": "y"
   },
-  "Haldimand_Norfolk_v1_00": {
-    "map_name": "Haldimand Norfolk",
-    "url": "",
-    "is_stable": "",
-    "multiplayer": "y"
-  },
   "Haldimand_Norfolk_v1_01": {
     "map_name": "Haldimand Norfolk",
     "url": "",
@@ -622,6 +616,12 @@
     "url": "",
     "is_stable": "",
     "multiplayer": "n"
+  },
+  "MID_EAST_2_v1_00": {
+    "map_name": "MID EAST 2",
+    "url": "",
+    "is_stable": "",
+    "multiplayer": "y"
   },
   "Middle_Earth_2_v1_00": {
     "map_name": "Middle Earth 2",
