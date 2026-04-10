@@ -35,13 +35,19 @@ def map_update_worker():
             # Check if folder already exists
             if not (maps_dir / folder_name).exists():
                 __main__.map_download_extract(url, filename)
+            #else:
+                #__main__.map_extractor()
 
         # After processing all files, extract any remaining files
-        __main__.map_extractor()
 
+        # Refresh the map interface
+        __main__.gDownloadingMapStatus = False
+        __main__.map_manager()
+        
+        print("end")
+        __main__.gUpdateWindow.withdraw()
+        __main__.stopThread()
+        __main__.map_manager()
     except Exception as e:
         __main__.error_logs(f"[map_update_worker] Error in download thread: {e}", "error")
 
-    __main__.stopThread()
-    __main__.gUpdateWindow.withdraw()
-    __main__.map_manager()

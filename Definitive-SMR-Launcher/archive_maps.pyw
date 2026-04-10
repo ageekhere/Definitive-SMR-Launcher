@@ -5,15 +5,13 @@ import threading
 
 _archive_thread = None # Thread
 _urls = None
+_max_timeout = 10
 
-"""
-Check for map updates in a thread
-"""
-MAX_TIMEOUT = 10
+# Check for new map updates
 def archive_maps(identifier):
     global _archive_thread
-    # Check if the thread exists and is currently working
-    if _archive_thread is not None and _archive_thread.is_alive():
+    
+    if _archive_thread is not None and _archive_thread.is_alive(): # Check if the thread exists and is currently working
         error_logs(f"[archive_maps] Fetch already in progress for {identifier}. Ignoring request.", "info")
         return _urls # Exit the function early
 
@@ -29,7 +27,7 @@ def archive_maps(identifier):
     return _urls
 
 """
-Fetches metadata from Internet Archive for the given identifier
+Using a Thread - Fetches metadata from Internet Archive for the given identifier
 and returns a list of downloadable .7z files.
 """
 def archive_maps_thread(identifier):
@@ -39,7 +37,7 @@ def archive_maps_thread(identifier):
     error_logs(f"[archive_maps_thread] api_url: {api_url} base_download_url:{base_download_url}", "info")
     try: # Send a GET request to the Internet Archive API
         error_logs("[archive_maps_thread] Connecting to archive.org","info")
-        resp = requests.get(api_url, timeout=MAX_TIMEOUT) # Request with a timeout
+        resp = requests.get(api_url, timeout=_max_timeout) # Request with a timeout
         error_logs("[archive_maps_thread] Collecting resp","info")
         resp.raise_for_status() # Raise an exception if the HTTP status is not 200 OK
         data = resp.json() # Parse the JSON response into a Python dictionary

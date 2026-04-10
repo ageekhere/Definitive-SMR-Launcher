@@ -237,7 +237,7 @@ def create_map_widgets(results, popup, popup_label, total_maps):
                 btn.configure(command=lambda button=btn, m=map_folder: map_click(m=m, button=button))
 
                 def map_click(m, button):
-                    if hasattr(__main__, "gSelected_button") and __main__.gSelected_button != button:
+                    if hasattr(__main__, "gSelected_button") and __main__.gSelected_button != button and __main__.gSelected_button != None:
                         __main__.gSelected_button.configure(fg_color="transparent", border_width=0)
                     __main__.gSelected_button = button
                     button.configure(fg_color="#444444", border_width=2, border_color="cyan")

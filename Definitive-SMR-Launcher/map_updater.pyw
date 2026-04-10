@@ -119,6 +119,7 @@ def map_updater():
             selectAll.configure(state="normal")
             __main__.gCancel_button.configure(state="disabled")
             disable_close()
+            __main__.map_manager()
 
         # Buttons
         selectAll = __main__.ctk.CTkButton(__main__.gUpdateWindow, text=__main__.get_text("SelectAll"), command=show_selected)
