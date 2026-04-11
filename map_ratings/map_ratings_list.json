@@ -1241,6 +1241,12 @@
     "is_stable": "y",
     "multiplayer": "y"
   },
+  "Corn_And_Cattle_Nebraska_Rails_v1_00": {
+    "map_name": "Corn And Cattle Nebraska Rails",
+    "url": "230",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "55",
