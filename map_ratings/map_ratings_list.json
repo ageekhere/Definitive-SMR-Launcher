@@ -1208,7 +1208,7 @@
   "WNYP_Revision_2_v1_00": {
     "map_name": "WNYP Revision 2",
     "url": "222",
-    "is_stable": "n",
+    "is_stable": "y",
     "multiplayer": "y"
   },
   "Wolf359_v1_00": {
@@ -1220,7 +1220,7 @@
   "Wood_Valley_v1_00": {
     "map_name": "Wood Valley",
     "url": "224",
-    "is_stable": "n",
+    "is_stable": "y",
     "multiplayer": "y"
   },
   "Wyoming_Map_v1_00": {
@@ -1238,7 +1238,7 @@
   "Zimbabwe_v1_00": {
     "map_name": "Zimbabwe",
     "url": "227",
-    "is_stable": "n",
+    "is_stable": "y",
     "multiplayer": "y"
   },
   "Corn_And_Cattle_Nebraska_Rails_v1_00": {
