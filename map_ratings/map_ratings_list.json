@@ -1220,7 +1220,7 @@
   "Wood_Valley_v1_00": {
     "map_name": "Wood Valley",
     "url": "224",
-    "is_stable": "y",
+    "is_stable": "n",
     "multiplayer": "y"
   },
   "Wyoming_Map_v1_00": {
