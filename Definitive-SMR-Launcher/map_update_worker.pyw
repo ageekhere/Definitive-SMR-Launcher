@@ -44,7 +44,6 @@ def map_update_worker():
         __main__.gDownloadingMapStatus = False
         __main__.map_manager()
         
-        print("end")
         __main__.gUpdateWindow.withdraw()
         __main__.stopThread()
         __main__.map_manager()

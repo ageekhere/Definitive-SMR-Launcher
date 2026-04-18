@@ -63,7 +63,6 @@ def get_map_rating(url: str):
     )
 
     try:
-        print("url",full_url)
         response = __main__.http_session.get(full_url, headers=HEADERS, timeout=10)
     except Exception as e:
         __main__.error_logs(

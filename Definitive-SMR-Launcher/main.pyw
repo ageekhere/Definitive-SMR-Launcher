@@ -189,8 +189,8 @@ if __name__ == '__main__':
     gGitHubBranch = "main"
     gGitHubOwner = "ageekhere"
     gGitHubRepo = "Definitive-SMR-Launcher"
-    gGitHubVersion: str = "version1.10"
-    gVersion: str = "1.10"
+    gGitHubVersion: str = "version1.12"
+    gVersion: str = "1.12"
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
     # ---------------------- Fonts / Geometry ----------------------
