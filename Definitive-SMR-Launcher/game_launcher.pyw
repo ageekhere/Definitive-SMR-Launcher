@@ -43,7 +43,8 @@ def game_launcher():
     workdir = __main__.os.path.dirname(exe_path)
 
     try:
-        ret = __main__.windll.shell32.ShellExecuteW(None, "runas", exe_path, None, workdir, 1)
+        #ret = __main__.windll.shell32.ShellExecuteW(None, "runas", exe_path, None, workdir, 1)
+        ret: int = __main__.windll.shell32.ShellExecuteW(None, "runas", exe_path, __main__.gGameLang, workdir, 1)  # Run executable as admin and pass the language flag
 
         # Log the return code
         __main__.error_logs(f"[game_launcher] ShellExecute return code: {ret}", "info")

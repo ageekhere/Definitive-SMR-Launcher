@@ -16,6 +16,17 @@ def unload_map():
             path.unlink()
             __main__.gRemoveSymlink.configure(state="disabled")
 
+
+def set_lang_type_selection(choice: str):
+        try:
+            # Persist the new value in config.ini and update globals
+            __main__.set_config_value("option3", choice)
+            __main__.messagebox.showinfo(__main__.get_text("LanguageSetTo") + " " + choice, __main__.get_text("ApplyLanguage"))
+            __main__.error_logs(f"[set_lang_type_selection] Language set to: {__main__.gConfigUserInfo['option3']}", "info")
+        except Exception as e:
+            __main__.error_logs(f"[set_lang_type_selection] Failed to update Language: {e}", "error")
+
+
 def interface_manager(os,ctk):
     __main__.error_logs("[interface] Setting up interface", "info")
     __main__.gLog_button = __main__.ctk.CTkButton(__main__.gApp, text=__main__.get_text("gLog_button"), corner_radius=0, command=__main__.debug_window, width=40) # Logs Button
@@ -85,11 +96,11 @@ def interface_manager(os,ctk):
     # language Dropdown
     __main__.glanguageDrop = __main__.ctk.CTkOptionMenu(
         __main__.gApp,
-        values=["English", "Mandarin Chinese","Hindi","Spanish","French"],
+        values=["English","French","German","Italian","Spanish","Dutch","Hindi","Mandarin Chinese"],
         command=__main__.set_lang_type_selection,
         corner_radius=0
     )
-    
+
     # Set current game type from config
     __main__.glanguageDrop.set(__main__.get_config_value("option3", default="English"))
 
@@ -185,6 +196,7 @@ def interface_manager(os,ctk):
     __main__.gGameLocation_label_id = __main__.gInterface_canvas.create_window(x_pos, int(canvas_height * (y_start + y_spacing*6)), window=__main__.gGameLocation_label, anchor="w")
     __main__.gRemoveSymlink_id = __main__.gInterface_canvas.create_window(x_pos, int(canvas_height * (y_start + y_spacing*7)), window=__main__.gRemoveSymlink, anchor="w")
     __main__.glanguageDrop_id = __main__.gInterface_canvas.create_window(x_pos, int(canvas_height * (y_start + y_spacing*8)), window=__main__.glanguageDrop, anchor="w")
+    
     __main__.glanguageAudioDrop_id = __main__.gInterface_canvas.create_window(x_pos, int(canvas_height * (y_start + y_spacing*9)), window=__main__.glanguageAudioDrop, anchor="w")
     __main__.downnload_audio_lang_id = __main__.gInterface_canvas.create_window(int(canvas_width * 0.133), int(canvas_height * (y_start + y_spacing*9)), window=__main__.downnload_audio_lang, anchor="w")
     __main__.gLog_button_id = __main__.gInterface_canvas.create_window(x_pos, int(canvas_height * (y_start + y_spacing*12)), window=__main__.gLog_button, anchor="w")

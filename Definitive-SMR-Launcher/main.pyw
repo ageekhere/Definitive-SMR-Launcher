@@ -183,14 +183,23 @@ if __name__ == '__main__':
     gUpdate_maps_button_id = None
     gResizing = False
     gMapMangerTheadRunning = False
+    gGameLang = "/lang=enu"
+    """
+    ENU: English  
+    FRA: French
+    DEU: German
+    ITA: Italian
+    ESP: Spanish
+    NLD: Dutch
+    """
 
 
     # ---------------------- GitHub / Version info ----------------------
     gGitHubBranch = "main"
     gGitHubOwner = "ageekhere"
     gGitHubRepo = "Definitive-SMR-Launcher"
-    gGitHubVersion: str = "version1.12"
-    gVersion: str = "1.12"
+    gGitHubVersion: str = "version1.13"
+    gVersion: str = "1.13"
     ginternetArchiveIdentifier = "sid-meiers-railroads-custom-maps-collection"
 
     # ---------------------- Fonts / Geometry ----------------------
@@ -261,12 +270,38 @@ if __name__ == '__main__':
             gLanguage_file = json.load(f)
 
     elif gLanguage == "Spanish":
+        gGameLang = "/lang=esp"
         path = APP_DIR /"lang"/"Spanish.json"
         with open(path, "r", encoding="utf-8") as f:
             gLanguage_file = json.load(f)
 
     elif gLanguage == "French":
+        gGameLang = "/lang=fra"
         path = APP_DIR /"lang"/"French.json"
+        with open(path, "r", encoding="utf-8") as f:
+            gLanguage_file = json.load(f)
+
+    elif gLanguage == "German":
+        gGameLang = "/lang=deu"
+        path = APP_DIR /"lang"/"German.json"
+        with open(path, "r", encoding="utf-8") as f:
+            gLanguage_file = json.load(f)
+
+    elif gLanguage == "Italian":
+        gGameLang = "/lang=ita"
+        path = APP_DIR /"lang"/"Italian.json"
+        with open(path, "r", encoding="utf-8") as f:
+            gLanguage_file = json.load(f)
+
+    elif gLanguage == "Spanish":
+        gGameLang = "/lang=esp"
+        path = APP_DIR /"lang"/"Spanish.json"
+        with open(path, "r", encoding="utf-8") as f:
+            gLanguage_file = json.load(f)
+
+    elif gLanguage == "Dutch":
+        gGameLang = "/lang=nld"
+        path = APP_DIR /"lang"/"Dutch.json"
         with open(path, "r", encoding="utf-8") as f:
             gLanguage_file = json.load(f)
 
