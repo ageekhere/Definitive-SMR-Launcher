@@ -1248,6 +1248,12 @@
     "multiplayer": "n"
   },
   "blank": {
+    "map_name": "Switzerland",
+    "url": "236",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
+  "blank": {
     "map_name": "",
     "url": "55",
     "is_stable": "y",
