@@ -1253,6 +1253,12 @@
     "is_stable": "y",
     "multiplayer": "n"
   },
+  "Southern_California_v1_00": {
+    "map_name": "Southern California",
+    "url": "237",
+    "is_stable": "y",
+    "multiplayer": "n"
+  },
   "blank": {
     "map_name": "",
     "url": "55",
